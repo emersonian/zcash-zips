@@ -65,7 +65,10 @@ Discretionary Budget. The ZIP has no significant privacy implications.
 ZIP 1015 provides that "ZCG awards are subject to approval by a five-seat ZCG
 Committee" [^zip-1015-zcg]. That size was carried over from the Major Grants
 committee of ZIP 1014 [^zip-1014], when the amounts involved were much smaller
-and ZCG's role was narrower.
+and ZCG's role was narrower. ZIP 1016 recognized this, noting that "Any
+changes to the ZCG or its governance, such as its expansion to include more
+members, may be desired but are specifically outside this proposal's scope"
+[^zip-1016].
 
 The ZCG funding stream is 8% of the block subsidy. At the current issuance
 rate that is about 144 ZEC per day, or roughly 52,500 ZEC a year (8% of
@@ -256,6 +259,8 @@ on grant review, which makes the extra seats more useful.
 [^zip-1015]: [ZIP 1015: Block Subsidy Allocation for Non-Direct Development Funding](zip-1015.rst)
 
 [^zip-1015-zcg]: [ZIP 1015: Block Subsidy Allocation for Non-Direct Development Funding, Zcash Community Grants](zip-1015.rst#zcash-community-grants-zcg)
+
+[^zip-1016]: [ZIP 1016: Community and Coinholder Funding Model](zip-1016.md)
 
 [^draft-grant-bar]: [Draft ZIP: Update to ZIP 1015: ZCG Committee Members May Not Apply for Grants During Their Term](draft-emersonian-zcg-member-grant-bar.md)
 
