@@ -1,5 +1,5 @@
     ZIP: Unassigned
-    Title: Protection of Accrued Zcash Community Grants Funds
+    Title: Protection and Treasury Management of Accrued Zcash Community Grants Funds
     Owners: Emerson <TBD>
     Status: Draft
     Category: Process
@@ -16,830 +16,980 @@ and "MAY" in this document are to be interpreted as described in BCP 14
 [^BCP14] when, and only when, they appear in all capitals.
 
 The terms "Zcash Community Grants" (or "ZCG"), "ZCG Committee", "Financial
-Privacy Foundation" (or "FPF"), "Autonomous Entities", "Discretionary Budget",
-and "Restricted Fund" in this document are to be interpreted as defined or
-used in ZIP 1015 [^zip-1015].
+Privacy Foundation" (or "FPF"), "Autonomous Entities", "Zcash Community
+Advisory Panel" (or "ZCAP"), and "Discretionary Budget" in this document are to
+be interpreted as defined or used in ZIP 1015 [^zip-1015]. In this ZIP the ZCG
+Committee is also called the grants committee, to distinguish it from the
+Treasury Committee.
 
 The terms "Coinholder-Controlled Fund" and "Key-Holder Organizations" in this
 document are to be interpreted as described in ZIP 1016 [^zip-1016].
 
-The term "Zcash Community Advisory Panel" (or "ZCAP") is to be interpreted as
-defined in ZIP 1015 [^zip-1015].
+The terms "Mainnet" and "Testnet" in this document are to be interpreted as
+defined in the Zcash protocol specification [^protocol-networks].
 
 "ZEC" refers to the native currency of Zcash on Mainnet.
 
-A **coinholder-amount voting round** is a coinholder vote held under ZIP 1016
-[^zip-1016-disbursement], in which each ballot is weighted by the amount of ZEC
-that the voter proves control of, conducted under the rules for such votes that
-are in effect at the time the vote is held.
+The terms below are to be interpreted as follows:
 
-A **ZCG Funding Stream** is any funding stream whose recipient is FPF (or a
-successor administrator) for the use of Zcash Community Grants. As of writing
-this means `FS_FPF_ZCG` [^zip-1015-funding-streams] and `FS_FPF_ZCG_H3`
-[^zip-0214] [^zip-1016-zcg], and it includes any later funding stream defined
-for the same purpose under any name.
+Coinholder-amount voting round
 
-**Accrued ZCG Funds** means:
+: A coinholder vote held under ZIP 1016 [^zip-1016-disbursement], in which each
+  ballot is weighted by the amount of ZEC that the voter proves control of,
+  conducted under the rules for such votes in effect at the time the vote is
+  held.
 
-1. every amount paid to a recipient address of a ZCG Funding Stream, from the
-   block in which the payment is mined onward;
-2. every amount donated, granted or otherwise contributed to FPF (or a
-   successor administrator) for the use of Zcash Community Grants, from the
-   time it is received;
-3. any amount that has been returned to the program, such as an unspent
-   grant tranche, a clawed-back grant payment, or an unspent part of the
-   Discretionary Budget; and
-4. everything that any of the above is converted into or earns. This includes
-   fiat currency, stablecoins, other digital assets, bank deposits, money
-   market instruments, interest, yield, and the proceeds of any hedging
-   position entered into under the Treasury Plan.
+ZCG Funding Stream
 
-Accrued ZCG Funds stay Accrued ZCG Funds for as long as they are held,
-whatever account, wallet, custodian or asset they are held in. Funds stop being
-Accrued ZCG Funds only when they are paid out for a Permitted Use.
+: Any funding stream whose recipient is FPF, or a successor administrator, for
+  the use of Zcash Community Grants. At the time of writing these are
+  `FS_FPF_ZCG` [^zip-1015-funding-streams] and `FS_FPF_ZCG_H3` [^zip-0214]
+  [^zip-1016-zcg]. The term includes any later funding stream defined for the
+  same purpose, under any name.
 
-A **Permitted Use** is a use of funds described in
-[Permitted uses of Accrued ZCG Funds](#permitted-uses-of-accrued-zcg-funds).
+Accrued ZCG Funds
 
-The **Reference Text** of ZIP 1015 is the text of the section "Zcash Community
-Grants (ZCG)" of ZIP 1015 [^zip-1015-zcg], together with the text of any ZIP
-that amends that section and that is Active or Final on the Effective Date, as
-those texts read on the Effective Date. Non-normative note: the Reference Text
-is fixed so that a later edit to ZIP 1015 cannot widen the meaning of "grant"
-and so open a back door around this ZIP. The ZIP Editors SHOULD record the
-git commit of the zcash/zips repository that holds the Reference Text when
-this ZIP becomes Active.
+: All of the following:
 
-A **Controlling Organization** is any organization or person that holds,
-administers, has signing authority over, acts as custodian of, or can direct
-the movement of any Accrued ZCG Funds. This includes, but is not limited to:
+  1. each amount paid to a recipient address of a ZCG Funding Stream, from the
+     block in which the payment is mined;
+  2. each amount donated or otherwise contributed to FPF, or a successor
+     administrator, for the use of Zcash Community Grants, from the time it is
+     received;
+  3. each amount returned to the ZCG program, such as an unspent grant
+     tranche, a recovered grant payment, or an unspent part of the
+     Discretionary Budget; and
+  4. all assets that any of the above is converted into or earns, including
+     fiat currency, stablecoins, other digital assets, deposits, interest,
+     yield, and the proceeds of any hedging position.
 
-* FPF, its board of directors, its supervisor, and its members;
-* the ZCG Committee and each of its members, when acting in that role;
-* any successor administrator of the ZCG program, including any independent
-  organization formed under the section "Furthering Decentralization" of
-  ZIP 1015 [^zip-1015-decentralization];
-* the Zcash Foundation, Electric Coin Company, Bootstrap Project, any
-  Key-Holder Organization, and any other organization, if it ever holds or
-  controls Accrued ZCG Funds; and
-* any custodian, trustee, signer, or service provider that holds Accrued ZCG
-  Funds on behalf of any of the above.
+  Funds remain Accrued ZCG Funds for as long as they are held, in whatever
+  account, wallet, custodian, or asset they are held. They cease to be Accrued
+  ZCG Funds only when paid out for a Permitted Use.
 
-A **Taking** is any action that causes Accrued ZCG Funds to leave the control of
-the ZCG program other than for a Permitted Use, or that makes them unusable for
-a Permitted Use. See [Prohibited transfers](#prohibited-transfers) for a
-non-exhaustive list.
+Reference Text
 
-The **Accrual Rate** is the share of the block subsidy (or any other
-protocol-level issuance) paid to ZCG Funding Streams, together with the start
-and end heights of those streams.
+: The section "Zcash Community Grants (ZCG)" of ZIP 1015 [^zip-1015-zcg],
+  together with any amendment to that section that is in a ZIP with status
+  Active or Final on the Activation Date, as that text reads on the Activation
+  Date.
 
-The **Effective Date** is the date on which this ZIP takes effect, as described
-in [Adoption](#adoption).
+Permitted Use
 
-The **Treasury Plan** is the plan that ZCG must publish under
-[Ten-year budget, treasury plan and hedging strategy](#ten-year-budget-treasury-plan-and-hedging-strategy).
+: A use of funds described in
+  [Permitted uses of Accrued ZCG Funds](#permitted-uses-of-accrued-zcg-funds).
+
+Controlling Organization
+
+: Any organization or person that holds, administers, has signing authority
+  over, acts as custodian of, or can direct the movement of any Accrued ZCG
+  Funds. This includes FPF (including its directors, supervisor, and members),
+  the ZCG Committee and its members, the Treasury Committee and its members, any
+  successor administrator of the ZCG program, and any custodian, trustee,
+  signer, or service provider acting for any of them. It also includes the Zcash
+  Foundation, Electric Coin Company, Bootstrap Project, any Key-Holder
+  Organization, or any other organization, at any time that it holds or controls
+  Accrued ZCG Funds.
+
+Taking
+
+: Any action that causes Accrued ZCG Funds to leave the ZCG program other than
+  by payment for a Permitted Use, or that makes them unusable for a Permitted
+  Use.
+
+Accrual Rate
+
+: The share of the block subsidy, or of any other issuance defined by the
+  consensus rules, that is paid to ZCG Funding Streams, together with the start
+  and end heights of those streams.
+
+Treasury Committee
+
+: The ZCG Treasury Committee established under
+  [ZCG Treasury Committee](#zcg-treasury-committee).
+
+Treasury Decision
+
+: A decision of a kind listed in
+  [Treasury Decisions](#treasury-decisions).
+
+Grant Decision
+
+: A decision of a kind listed in [Grant Decisions](#grant-decisions).
+
+Program Budget
+
+: The budget for the ZCG program set by the Treasury Committee under
+  [Program Budget](#program-budget).
+
+Treasury Plan
+
+: The ten-year budget, treasury policy, and hedging strategy described in
+  [Treasury Plan](#treasury-plan).
+
+Activation Date
+
+: The date on which this ZIP becomes Active under ZIP 0 [^zip-0000].
+
+Protection Date
+
+: The later of the Activation Date and the date on which FPF publishes the
+  legal commitment described in
+  [Legal commitment by FPF](#legal-commitment-by-fpf).
 
 
 # Abstract
 
-This ZIP makes three commitments about the funds that Zcash Community Grants
-has already received, and will receive, under the ZCG funding stream.
+This ZIP protects funds that have already accrued to Zcash Community Grants
+(ZCG) and changes how ZCG manages them.
 
-First, it bars anyone, by any ZIP, network upgrade, vote, agreement or other
-means, from taking away funds that have already accrued to ZCG. Balances that
-ZCG already holds are left exactly where they are.
+No ZIP, network upgrade, vote, or agreement may reduce, redirect, burn, or
+otherwise take funds that have accrued to ZCG. FPF, the ZCG Committee, and any
+other organization that holds or controls those funds may use them only for
+grants and grant administration as defined in ZIP 1015. Transfers to the
+Network Sustainability Mechanism, to unspendable addresses, to a lockbox, or
+to the Coinholder-Controlled Fund are prohibited. A future ZIP may change only
+the rate at which new funds accrue to ZCG, and only for future blocks.
 
-Second, it bars FPF, the ZCG Committee and every other organization that holds
-or controls those funds from allowing them to be moved for any purpose other
-than grants as defined in the ZCG section of ZIP 1015 (including the
-administration expenses that section already allows). In particular, accrued
-ZCG funds cannot be sent to the Network Sustainability Mechanism, burned, sent
-to a lockbox, sent to the Coinholder-Controlled Fund, or used for FPF's own
-operations.
+ZCG is required to form a separate Treasury Committee of at least three people.
+Only the Treasury Committee may buy, sell, or convert ZEC, hedge, or set
+budgets. The ZCG grants committee makes grant decisions only, and no person may
+sit on both committees. Until the Treasury Committee is formed, the grants
+committee may not decide to buy or sell ZEC.
 
-Third, it says that the only thing a future ZIP may change about ZCG funding is
-the rate at which new funds accrue. A future ZIP can reduce the ZCG funding
-stream, including to zero, but only for blocks mined after that ZIP takes
-effect.
+The Treasury Committee must publish a ten-year budget, a treasury plan, and a
+strategy for hedging the risk of a fall in the price of ZEC by 31 March 2027.
 
-It also orders ZCG to publish, by 31 March 2027, a ten-year budget, a treasury
-plan, and a strategy for hedging the risk that the value of ZEC falls.
-
-Finally, it addresses the obvious question of how one ZIP can bind later ZIPs,
-by combining an entrenchment clause, a legal commitment by FPF that does not
-depend on the ZIP process, and a request that node developers not implement any
-consensus change that seizes funds already paid out.
+The ZIP has privacy implications for the disclosure of treasury addresses,
+trades, and the personal holdings of committee members, which are discussed
+below.
 
 
 # Motivation
 
-## Recent proposals to take ZCG's existing funds
+## Proposals to take existing ZCG funds
 
 In October 2026 several proposals were made to end or redirect ZCG funding. As
-of late October 2026 these included:
+of late October 2026 these included a draft ZIP to end the ZCG funding stream
+and redirect it to the Network Sustainability Mechanism (NSM) [^zips-pr-1414],
+since closed; a draft ZIP to redirect the stream to a new lockbox and to have
+the ZCG Committee send 50,000 ZEC of its existing balance to an unspendable
+address, to be credited to the NSM at a later network upgrade
+[^zips-pr-1428]; a draft ZIP to wind ZCG down [^zips-pr-1423]; and a ZCG
+proposal on the Zcash Community Forum for a voluntary taper that would send
+about 36,200 ZEC to the NSM [^forum-zcg-taper].
 
-* a draft ZIP that would end the ZCG funding stream and redirect it to the
-  Network Sustainability Mechanism (NSM) (zcash/zips#1414, since closed);
-* a draft ZIP that would redirect the stream to a new lockbox and also
-  require the ZCG Committee to send 50,000 ZEC of its existing balance to a
-  provably unspendable address, to be credited to the NSM at a later network
-  upgrade (zcash/zips#1428);
-* a draft ZIP that would wind ZCG down, subject to Cayman Islands legal advice
-  and changes to the relevant agreements (zcash/zips#1423); and
-* a ZCG forum post proposing a voluntary taper, including sending about
-  36,200 ZEC to the NSM.
+How much of the block subsidy should go to ZCG in future is a legitimate
+question for the community, and this ZIP does not try to answer it. Some of
+these proposals, however, would also take funds that were issued under rules
+the community had already agreed, for a purpose those rules stated. This ZIP
+treats that as a separate question, and answers it.
 
-Reasonable people disagree about how much block subsidy should go to ZCG in
-the future. That is a legitimate question for the community, and this ZIP does
-not answer it. But two of these proposals reach back and take funds that were
-issued, under rules the community had already agreed, for a specific
-purpose. That is a different kind of act, and it should not be on the table.
+## Reasons to protect accrued funds
 
-## Why accrued funds should be protected
+The funds were issued for a stated purpose. ZIP 1015 restricts the ZCG funds to
+grants to parties independent of FPF, or to Autonomous Entities, plus related
+administration, and requires FPF to hold them as a restricted fund donation.
+Each block that paid the ZCG Funding Stream was produced, and each ZEC in it was
+issued, on that basis.
 
-1. **The funds were issued for a stated purpose.** ZIP 1015 says that the ZCG
-   funds "MUST be used exclusively for issuing Zcash Community Grants to
-   external parties that are independent of the FPF or to Autonomous Entities
-   operating under the FPF umbrella", and that FPF must hold them as a
-   Restricted Fund. Every block that paid the ZCG stream was mined, and every
-   ZEC in it was issued, on that understanding. Changing the purpose of money
-   after it has been issued breaks the bargain that justified issuing it.
+Grantees and applicants rely on ZCG being able to pay. If its balance can be
+taken by a later vote, every multi-year grant carries political risk, and
+capable teams will either discount that risk or not apply.
 
-2. **Grantees and applicants rely on it.** Teams plan hiring, multi-year work
-   and milestones around ZCG's ability to pay. If the balance can be taken by
-   a later vote, every multi-year grant carries political risk, and the best
-   teams will discount ZCG grants accordingly or not apply.
+There is legal exposure for FPF. Sending restricted funds to a purpose outside
+the restriction, or to an address from which they can never be recovered, may
+expose FPF's directors to claims under Cayman Islands law. In October 2026 FPF
+said that its counsel had considered such a donation subject to "an
+affirmative community vote in favor of the proposal and an accepted ZIP"
+[^forum-fpf-reply]. Neither term is defined in any ZIP.
 
-3. **Legal exposure.** ZIP 1015 requires FPF to recognize the ZCG slice "as a
-   Restricted Fund donation under the above constraints". Under Cayman
-   Islands law a foundation company that sends restricted funds to a purpose
-   outside the restriction, or to an address from which nobody can ever
-   recover them, may expose its directors to claims. FPF itself said in
-   October 2026 that its counsel had considered such a donation only on the
-   condition of "an affirmative community vote in favor of the proposal and
-   an accepted ZIP", neither of which is defined in any ZIP. This ZIP removes
-   the ambiguity: no such vote or ZIP can authorize it.
+Taking validly issued funds from a disfavored recipient is, in governance
+terms, close to freezing a disfavored user's coins. A clear rule against the
+first makes it easier for the community to say credibly that it will not do
+the second.
 
-4. **Credible neutrality and precedent.** Zcash's value rests partly on the
-   promise that funds that have been validly issued are not seized by
-   later political action. Taking funds from a disfavored recipient is the
-   same kind of act, in governance terms, as freezing a disfavored user's
-   coins. A rule that the community does not do the first makes it easier to
-   say that it will never do the second.
+Finally, separating future funding from past funding lets the community debate
+the Accrual Rate without that debate also being about money already committed.
 
-5. **Separating two decisions.** The community needs to keep its full ability
-   to decide how much to fund grants in the future. Protecting the past while
-   leaving the future rate open lets that debate happen without also being a
-   fight over money that was already committed.
+## Reasons for a separate Treasury Committee
 
-## Why a ten-year plan and hedging strategy
+ZCG's balance is held largely in ZEC, while many grant obligations are
+understood by grantees in US dollar terms. The ZCG Funding Stream is scheduled
+to end at the third halving (Mainnet height 6132390 under ZIP 214 Revision 3
+[^zip-0214], expected in late 2028), and could end sooner. A fall in the price
+of ZEC can therefore reduce ZCG's ability to fund work by a large fraction
+within months, with no change to any ZIP.
 
-ZCG's funding stream is scheduled to end at Zcash's third halving (Mainnet
-height 6132390 under ZIP 214 Revision 3 [^zip-0214], expected around late
-2028), and it may end sooner if a future ZIP reduces the Accrual Rate. ZCG's
-balance is held largely in ZEC, while most grant obligations are understood by
-grantees in US dollar terms. A fall in the price of ZEC can therefore cut ZCG's
-real ability to fund work by a large fraction within months, even if no ZIP
-changes anything.
+At the time of writing, the ZCG Committee both chooses grants and decides, with
+FPF, how ZCG's funds are held and when ZEC is sold. These are different skills,
+and combining them creates conflicts: a committee under pressure to fund a
+popular grant may sell ZEC at a poor time, and a committee that decides when
+ZCG sells ZEC has information that could be misused. ZCG also does not publish
+a multi-year budget, a treasury policy, or a hedging policy.
 
-If accrued funds are protected forever, ZCG has a matching responsibility to
-manage them well over a long horizon: to show the community how long they will
-last, what they will be spent on, and how ZCG will avoid being forced to stop
-funding work in the middle of a downturn. As of writing, ZCG publishes
-quarterly reports and a dashboard under ZIP 1015, but no public multi-year
-budget, treasury policy, or hedging policy.
+If accrued funds are protected permanently, ZCG has a matching duty to manage
+them well over a long period. A separate committee with its own members, a
+published plan, and clear limits on what each committee may decide is intended
+to meet that duty.
+
+
+# Privacy Implications
+
+Publishing treasury addresses, viewing keys, or detailed trade records lets
+anyone link ZCG's holdings and movements over time. This is intended, since the
+community needs to verify that Accrued ZCG Funds are not taken, but it can
+also reveal ZCG's counterparties, the timing of its trades, and, through grant
+payments, information about grantees. Publishing planned trades before they are
+executed could also allow others to trade against ZCG.
+
+Holding ZEC in shielded pools improves the privacy of ZCG and its grantees but
+makes public verification depend on ZCG choosing to publish viewing keys or
+attestations.
+
+Disclosure of the personal ZEC holdings of Treasury Committee members, which
+this ZIP requires in order to manage conflicts of interest, reveals sensitive
+financial information about individuals.
+
+The Specification addresses these trade-offs by allowing details of a trade to
+be withheld until it has been executed, and by limiting personal disclosures
+to what is needed to identify conflicts.
 
 
 # Requirements
 
-* Funds that have accrued to ZCG cannot be reduced, redirected, burned or
+* Funds that have accrued to ZCG cannot be reduced, redirected, burned, or
   otherwise taken by any later ZIP, network upgrade, vote, or agreement.
-* Accrued ZCG funds can only be used for grants and grant administration as
-  defined in ZIP 1015, and every organization that holds or controls them is
-  bound by this.
+* Accrued ZCG Funds can be used only for grants and grant administration as
+  defined in ZIP 1015, and this binds every organization that holds or
+  controls them.
 * A future ZIP can still change the rate at which new funds accrue to ZCG,
-  including reducing it to zero, for future blocks.
-* The protection does not depend only on the ZIP process, which cannot bind
-  itself, but is also backed by a legal commitment that a later ZIP cannot
-  undo.
-* ZCG publishes a ten-year budget, treasury plan and ZEC-depreciation hedging
-  strategy by 31 March 2027, and keeps them current.
-* Prudent treasury management, including converting ZEC to other assets to
-  reduce risk, is allowed and is not treated as a prohibited transfer, as long
-  as the result stays in the restricted fund.
+  including to zero, for future blocks.
+* The protection does not rely only on the ZIP process, which cannot prevent
+  its own later amendment, and is also backed by a published legal commitment.
+* Decisions about how ZCG's funds are held, converted, and hedged, and how much
+  ZCG may spend, are made by a body separate from the body that chooses grants,
+  with no overlapping members.
+* While that separate body is being formed, the grants committee does not
+  decide to buy or sell ZEC.
+* A ten-year budget, treasury plan, and ZEC-depreciation hedging strategy are
+  published by 31 March 2027 and kept current.
+* Converting or hedging Accrued ZCG Funds is possible without being treated as
+  a transfer out of the restricted fund.
 
 
 # Non-requirements
 
-* This ZIP does not set or change the Accrual Rate. In particular it does not
-  extend, reduce or end the `FS_FPF_ZCG_H3` funding stream.
-* This ZIP does not change the ZCG Committee's discretion over which grants
-  to fund, how the ZCG Committee is selected, or FPF's legal veto under
-  point 6 of the Reference Text.
+* This ZIP does not set or change the Accrual Rate. In particular, it does not
+  extend, reduce, or end the `FS_FPF_ZCG_H3` funding stream.
+* This ZIP does not change how the ZCG Committee is selected, or FPF's ability
+  to veto a decision that would violate Cayman Islands law under point 6 of the
+  Reference Text.
 * This ZIP does not cover the Coinholder-Controlled Fund, the in-protocol
-  lockbox, or funds held by any other organization, except where they hold
-  Accrued ZCG Funds.
-* This ZIP does not prevent FPF from complying with a binding court order,
-  sanctions law or other legal requirement that it cannot lawfully refuse. It
-  does require such cases to be disclosed (see
-  [Legal compulsion](#legal-compulsion)).
+  lockbox, or funds held by other organizations, except to the extent that they
+  hold Accrued ZCG Funds.
+* This ZIP does not prevent a Controlling Organization from complying with a
+  court order, sanctions law, or other legal requirement that it cannot
+  lawfully refuse.
 * This ZIP does not decide whether the NSM, a new lockbox, or any other use of
-  future issuance is a good idea.
+  future issuance is desirable.
 
 
 # Specification
 
 ## Adoption
 
-This ZIP takes effect on the later of:
+The sections [ZCG Treasury Committee](#zcg-treasury-committee),
+[Separation of grant and treasury decisions](#separation-of-grant-and-treasury-decisions),
+[Interim restriction on the grants committee](#interim-restriction-on-the-grants-committee),
+[Program Budget](#program-budget), and [Treasury Plan](#treasury-plan) take
+effect on the Activation Date.
 
-1. the date on which it becomes Active under ZIP 0 [^zip-0000]; and
-2. the date on which FPF publishes the signed legal commitment described in
-   [Legal commitment by FPF](#legal-commitment-by-fpf).
+All other requirements of this ZIP take effect on the Protection Date.
 
-That date is the Effective Date.
+Before the ZIP Editors change the status of this ZIP to Active, the community
+SHOULD be consulted through both a coinholder-amount voting round, held by the
+Key-Holder Organizations under the rules in effect at the time, and a poll of
+ZCAP or its successor. The ZIP Editors SHOULD publish the results of both with
+the status change.
 
-Because this ZIP limits what later ZIPs may do, it SHOULD have wider support
-than an ordinary Process ZIP before it becomes Active. Before the ZIP Editors
-change its status to Active, the community SHOULD be asked about it through
-both:
+Funds that accrued to ZCG before the Protection Date are Accrued ZCG Funds and
+are protected by this ZIP in the same way as funds that accrue after it.
 
-* a coinholder-amount voting round, held by the Key-Holder Organizations under
-  the rules for such votes in effect at the time; and
-* a poll of the Zcash Community Advisory Panel (or its successor), which is the
-  body that selects the ZCG Committee under ZIP 1015.
-
-The ZIP Editors SHOULD treat clear approval in both as strong evidence of rough
-consensus, and SHOULD publish both results alongside the status change.
-
-Funds that accrued to ZCG before the Effective Date are Accrued ZCG Funds. This
-ZIP protects them in the same way as funds that accrue after it.
+The ZIP Editors SHOULD record, when this ZIP becomes Active, the git commit of
+the zcash/zips repository that contains the Reference Text.
 
 ## Protection of Accrued ZCG Funds
 
-No ZIP, network upgrade, vote (including any coinholder-amount voting round or
+No ZIP, network upgrade, vote (including a coinholder-amount voting round or a
 ZCAP poll), agreement, resolution, or other governance action, whether made
-before or after the Effective Date, SHALL reduce, redirect, recapture, freeze,
+before or after the Protection Date, SHALL reduce, redirect, recapture, freeze,
 burn, or otherwise take any Accrued ZCG Funds.
 
-Any provision of any ZIP that would require or authorize a Taking is, to that
-extent, without effect, and no Controlling Organization SHALL act on it. This
-applies whatever the provision calls the Taking, for example a "donation",
-"contribution", "return", "wind-down", "taper", "rebalancing" or "transfer".
+A provision of any ZIP that would require or authorize a Taking has no effect
+to that extent, and no Controlling Organization SHALL act on it. This applies
+however the Taking is described, including as a donation, contribution, return,
+wind-down, taper, or rebalancing.
 
-The balances that ZCG holds on the Effective Date, and all later Accrued ZCG
-Funds, SHALL be left under the administration of the ZCG program, to be spent
-only for Permitted Uses at the discretion of the ZCG Committee.
+All Accrued ZCG Funds SHALL remain under the administration of the ZCG program,
+to be used only for Permitted Uses.
 
 ## Permitted uses of Accrued ZCG Funds
 
 Accrued ZCG Funds MUST be used only for:
 
-1. issuing Zcash Community Grants to external parties that are independent of
-   FPF, or to Autonomous Entities operating under the FPF umbrella, as
-   described in point 1 of the Reference Text, and subject to points 2 to 7 of
-   the Reference Text; and
-2. expenses reasonably related to the administration of Zcash Community
-   Grants, including the Discretionary Budget and ZCG Committee compensation,
-   as described in points 1, 8, 9 and 10 of the Reference Text.
+1. Zcash Community Grants to external parties that are independent of FPF, or
+   to Autonomous Entities operating under the FPF umbrella, as described in
+   point 1 of the Reference Text and subject to points 2 to 7 of the Reference
+   Text; and
+2. expenses reasonably related to the administration of Zcash Community Grants,
+   including the Discretionary Budget and committee compensation, as described
+   in points 1, 8, 9, and 10 of the Reference Text, and the costs of the
+   Treasury Committee and of treasury management under this ZIP.
 
-No other use is a Permitted Use. In particular, Accrued ZCG Funds MUST NOT be
-used for FPF's internal operations or for any direct expense unrelated to the
-administration of Zcash Community Grants, as already required by ZIP 1015.
+Accrued ZCG Funds MUST NOT be used for any other purpose. In particular, they
+MUST NOT be used for FPF's internal operations or for any direct expense
+unrelated to the administration of Zcash Community Grants.
 
-Non-normative note: this restates ZIP 1015's own restriction rather than
-inventing a new one. What is new is that the restriction is made permanent
-for funds that have already accrued, binds every organization that holds the
-funds rather than only FPF, and cannot be widened by a later ZIP.
+## Prohibited transfers
 
-### Prohibited transfers
-
-Without limiting the general rule above, no Controlling Organization SHALL
-make, sign, approve, or allow any of the following with Accrued ZCG Funds:
+No Controlling Organization SHALL make, sign, approve, or permit any of the
+following with Accrued ZCG Funds:
 
 * a transfer to the Network Sustainability Mechanism, or to any address,
-  output or mechanism intended to be credited to it now or in future;
-* a transfer to a provably unspendable address, an `OP_RETURN` output, or any
-  other output from which the funds cannot be recovered, or any other burn;
+  output, or mechanism intended to be credited to it now or in future;
+* a transfer to a provably unspendable address or an `OP_RETURN` output, or
+  any other burn;
 * a transfer to any in-protocol lockbox, to the Coinholder-Controlled Fund, or
   to any fund that is not administered for Permitted Uses;
-* a transfer to miners, to coinholders, or to any other class of persons as a
-  distribution or refund;
-* a transfer to FPF's general funds, to the Zcash Foundation, Electric Coin
-  Company, Bootstrap Project, or any other organization, other than as
-  payment for a Permitted Use;
-* use of the funds as collateral, or as a guarantee, for any obligation that
-  is not itself for a Permitted Use; and
-* any loan of the funds to a Controlling Organization or to a related party of
-  a Controlling Organization.
+* a distribution or refund to miners, coinholders, or any other class of
+  persons;
+* a transfer to FPF's general funds, the Zcash Foundation, Electric Coin
+  Company, Bootstrap Project, or any other organization, other than as payment
+  for a Permitted Use;
+* a pledge of the funds as collateral or as a guarantee for any obligation that
+  is not itself for a Permitted Use; or
+* a loan of the funds to a Controlling Organization or to a related party of a
+  Controlling Organization.
 
-This list applies whether the transfer is described as voluntary or
-mandatory, and whether or not it is approved by the ZCG Committee, the FPF
-board, a coinholder-amount voting round, a ZCAP poll, or a ZIP.
+This applies whether the transfer is voluntary or mandatory, and whether or not
+it is approved by the ZCG Committee, the Treasury Committee, FPF's board, a
+coinholder-amount voting round, a ZCAP poll, or a ZIP.
 
-### Treasury management is not a Taking
+## Treasury management
 
-Converting Accrued ZCG Funds from one asset into another, moving them between
-accounts, wallets or custodians, and entering into hedging positions, is not a
-Taking and is not a prohibited transfer, provided that:
+Converting Accrued ZCG Funds from one asset to another, moving them between
+accounts, wallets, or custodians controlled by the ZCG program's administrator,
+and opening or closing hedging positions, are not Takings and are not
+prohibited transfers, provided that:
 
-* the resulting assets remain Accrued ZCG Funds, held for the ZCG program and
-  accounted for in its Restricted Fund;
-* the action is consistent with the Treasury Plan that is in effect at the
-  time (or, before the first Treasury Plan is published, with prudent
-  practice); and
+* the resulting assets remain Accrued ZCG Funds and are accounted for in ZCG's
+  restricted fund;
+* the action is a Treasury Decision made by the Treasury Committee, or is
+  permitted by
+  [Interim restriction on the grants committee](#interim-restriction-on-the-grants-committee);
+* after the first Treasury Plan is published, the action is consistent with the
+  Treasury Plan then in effect; and
 * the action is reported in ZCG's next quarterly report.
 
-Reasonable transaction costs, custody fees and hedging costs are
-administration expenses under point 2 of
-[Permitted uses](#permitted-uses-of-accrued-zcg-funds).
+Reasonable transaction, custody, and hedging costs are administration expenses
+under item 2 of [Permitted uses of Accrued ZCG Funds](#permitted-uses-of-accrued-zcg-funds).
+A loss caused by a fall in the price of an asset, or by closing a hedge at a
+loss, is not a Taking if the action that led to it complied with this section.
 
-Losses from a fall in the price of an asset, or from a hedge that is closed at
-a loss, are not a Taking, as long as the action was consistent with the
-Treasury Plan.
+## Theft and loss
 
-### Theft, loss and legal compulsion
+Theft or accidental loss of Accrued ZCG Funds is not a Taking. The "Security
+precautions" section of ZIP 1016 [^zip-1016-security] continues to apply. Any
+amount recovered after a theft or loss is Accrued ZCG Funds.
 
-#### Theft and loss
+## Legal compulsion
 
-Theft or accidental loss of Accrued ZCG Funds is not a Taking for the purposes
-of this ZIP, but the requirements of the "Security precautions" section of
-ZIP 1016 [^zip-1016-security] continue to apply. Any amount recovered after a
-theft or loss is Accrued ZCG Funds.
+If a Controlling Organization is legally compelled to transfer, freeze, or
+surrender Accrued ZCG Funds, it SHALL:
 
-#### Legal compulsion
-
-If a Controlling Organization is legally compelled to transfer, freeze or
-surrender any Accrued ZCG Funds (for example by a court order or sanctions
-law), it SHALL:
-
-* resist the compulsion by all reasonable legal means, where doing so is
-  lawful and has a reasonable prospect of success;
-* publicly disclose, as promptly as the law allows, the amount affected, the
-  legal basis, and the steps it took; and
+* resist the compulsion by reasonable legal means, where that is lawful and has
+  a reasonable prospect of success;
+* publicly disclose the amount affected, the legal basis, and the steps it took,
+  as soon as the law allows; and
 * seek the return of the funds to the ZCG program where possible.
 
-A Controlling Organization MUST NOT seek, invite, or consent to a court order,
-regulatory action or other legal process for the purpose of achieving a Taking
-that this ZIP otherwise forbids.
+A Controlling Organization MUST NOT seek, invite, or consent to legal process
+for the purpose of bringing about a Taking that this ZIP would otherwise
+prohibit.
 
 ## Future changes to ZCG funding
 
-### Only the Accrual Rate may change
+### Changes to the Accrual Rate
 
-A ZIP that is adopted after the Effective Date MAY change the Accrual Rate. It
-MAY increase it, reduce it, end it, or create a new ZCG Funding Stream. Any
-such change:
+A ZIP adopted after the Protection Date MAY change the Accrual Rate, including
+by increasing it, reducing it, ending it, or creating a new ZCG Funding Stream.
+Such a change:
 
 * MUST apply only to blocks mined at or after the activation height of the
-  network upgrade, or the effective date of the process change, that deploys
-  it; and
-* MUST NOT have any effect on Accrued ZCG Funds, including funds that accrued
-  between the adoption of the ZIP and its activation.
+  network upgrade that deploys it; and
+* MUST NOT affect Accrued ZCG Funds, including funds that accrue between the
+  adoption of that ZIP and its activation.
 
-Changes that are administrative and do not reduce, redirect, or change the
-Permitted Uses of Accrued ZCG Funds are not prohibited by this ZIP. These
-include, for example:
+### Administrative changes
+
+This ZIP does not prohibit a later ZIP from making administrative changes that
+do not reduce or redirect Accrued ZCG Funds and do not change their Permitted
+Uses. Examples are:
 
 * changing the recipient address of a ZCG Funding Stream to another address
   controlled by the ZCG program's administrator, as in ZIP 2008 [^zip-2008];
-* transferring administration of the ZCG program, together with all Accrued
-  ZCG Funds, to a successor administrator that is bound by this ZIP (see
-  [Succession](#succession));
+* transferring administration of the ZCG program, with all Accrued ZCG Funds,
+  to a successor administrator under [Succession](#succession);
 * adding transparency, reporting, conflict-of-interest, or security
   requirements; and
-* changing how the ZCG Committee is selected, provided that the change does
-  not in practice route Accrued ZCG Funds to anything other than a Permitted
-  Use.
+* changing how the ZCG Committee or the Treasury Committee is selected,
+  provided that the change does not result in Accrued ZCG Funds being used
+  other than for a Permitted Use, and does not remove the separation required
+  by [Separation of grant and treasury decisions](#separation-of-grant-and-treasury-decisions).
 
-No later ZIP SHALL change the Permitted Uses of Accrued ZCG Funds, or change
-the Reference Text as it applies to Accrued ZCG Funds. A later ZIP that amends
-the "Zcash Community Grants (ZCG)" section of ZIP 1015 MAY apply its changes to
-funds that accrue after it takes effect, but only if those changes keep the
-use of the funds within grants and grant administration for the Zcash
-ecosystem.
+### Changes to the grant rules
 
-Open question for the ZIP Owner: this draft lets a future ZIP narrow or adjust
-the grant rules for funds that accrue later, while freezing the rules for funds
-already accrued. An alternative is to freeze the definition of "grant" for all
-ZCG funds, past and future. The trade-off is that a total freeze makes it
-harder to improve the program; the current text tries to keep improvements
-possible without opening a path to reuse.
+No later ZIP SHALL change the Permitted Uses of Accrued ZCG Funds, or change the
+Reference Text as it applies to Accrued ZCG Funds.
 
-### No consensus change may affect Accrued ZCG Funds
+A later ZIP that amends the "Zcash Community Grants (ZCG)" section of ZIP 1015
+MAY apply its changes to funds that accrue after that ZIP takes effect,
+provided that those funds remain restricted to grants for the Zcash ecosystem
+and their administration.
+
+### Consensus changes
 
 No network upgrade SHALL freeze, invalidate, make unspendable, reassign, or
-otherwise change the spendability of any output that holds Accrued ZCG Funds,
-except as a side effect of a change that applies in the same way to all
-outputs of the same type (for example the deprecation of a value pool, in
-which case the ZCG program MUST be given the same migration path as any other
-holder).
+otherwise change the spendability of an output holding Accrued ZCG Funds,
+except as a side effect of a change that applies equally to all outputs of the
+same type, such as the deprecation of a value pool. In that case the ZCG
+program MUST be given the same means of migrating its funds as any other
+holder.
 
 Developers of Zcash consensus node software SHOULD NOT implement, and node
-operators SHOULD NOT run, any consensus change that singles out outputs
-holding Accrued ZCG Funds.
+operators SHOULD NOT run, a consensus change that singles out outputs holding
+Accrued ZCG Funds.
 
-Non-normative note: this matches the note in ZIP 1016 that "nothing forces
-developers of Zcash consensus node software to implement any particular
-proposal". This section is a statement of social consensus to the same
-effect, in the other direction.
+<div class="note"></div>
 
-### Interaction with the ZIP 1015 enforcement remedy
+ZIP 1016 notes that nothing forces node developers to implement any particular
+proposal [^zip-1016-admin]. The requirements in this section record social
+consensus in the same sense.
 
-ZIP 1015's "Enforcement" section provides that a substantial violation of FPF's
-obligations, not promptly remedied, "will result in a modified version of Zcash
-node software that removes ZCG's Dev Fund slice and allocates it to the
-Deferred Dev Fund lockbox" [^zip-1015-enforcement]. That remedy changes only the
-Accrual Rate for future blocks, and remains available. It MUST NOT be extended
-to Accrued ZCG Funds.
+### ZIP 1015 enforcement remedy
 
-If a Controlling Organization breaches this ZIP, the remedies are those in
-[Enforcement](#enforcement), and not a Taking.
+ZIP 1015 provides that a substantial violation of FPF's obligations, not
+promptly remedied, will result in node software that removes ZCG's Dev Fund
+slice and allocates it to the Deferred Dev Fund Lockbox
+[^zip-1015-enforcement]. That remedy changes only the Accrual Rate and remains
+available. It MUST NOT be extended to Accrued ZCG Funds.
 
 ## Succession
 
 If FPF stops administering the ZCG program for any reason, including its
-dissolution, a decision to transition ZCG to an independent organization
-under ZIP 1015, or an inability to continue for legal reasons, then all
+dissolution, a transition of ZCG to an independent organization under the
+section "Furthering Decentralization" of ZIP 1015
+[^zip-1015-decentralization], or a legal inability to continue, then all
 Accrued ZCG Funds SHALL be transferred to a successor administrator that:
 
 * is selected through the process that selects the ZCG Committee under the
-  Reference Text (ZCAP or its successor), or, if that process no longer
-  exists, through a process set out in a ZIP;
-* agrees in writing, before the transfer, to be bound by this ZIP and by the
-  constraints of the Reference Text, including the Restricted Fund
-  requirement; and
+  Reference Text, or, if that process no longer exists, through a process
+  specified in a ZIP;
+* agrees in writing, before the transfer, to be bound by this ZIP and the
+  constraints of the Reference Text; and
 * publishes that agreement.
 
-Until a successor is in place, the outgoing administrator SHALL keep holding
-the Accrued ZCG Funds for the ZCG program, and SHALL NOT transfer them to any
-other purpose. If the program truly cannot continue, Accrued ZCG Funds SHALL
-be applied to the purpose closest to the Permitted Uses (grants for the Zcash
-ecosystem), and SHALL NOT be distributed, burned or used for any other
-purpose.
-
-Non-normative note: the last rule is meant to work like the "cy-près"
-doctrine used for charitable funds in many legal systems: if the original
-purpose fails, the money goes to the nearest purpose, not back into general
-circulation.
+Until a successor is in place, the outgoing administrator SHALL continue to
+hold the Accrued ZCG Funds for the ZCG program. If the ZCG program cannot
+continue, Accrued ZCG Funds SHALL be applied to the purpose closest to the
+Permitted Uses, namely grants for the Zcash ecosystem, and SHALL NOT be
+distributed, burned, or used for any other purpose.
 
 ## Entrenchment
 
-### The problem
+This ZIP MAY be amended to strengthen the protection of Accrued ZCG Funds, to
+correct errors, or to make changes allowed by
+[Administrative changes](#administrative-changes). It SHALL NOT be amended,
+replaced, or obsoleted in a way that would permit a Taking.
 
-A ZIP is a statement of community consensus, recorded by the ZIP Editors. It
-has no special power to stop a later ZIP, with later consensus, from saying
-the opposite. A rule that says "no later ZIP may change this rule" can, in
-principle, be repealed by a later ZIP that says "this rule is repealed". This
-ZIP does not pretend otherwise.
+A later ZIP SHALL NOT be interpreted as repealing, limiting, or overriding any
+part of this ZIP by implication. A ZIP that is intended to do so MUST say so in
+its preamble, using the `Updates` or `Obsoletes` field, and in its abstract.
 
-Instead, it uses three layers of protection that each make a Taking harder,
-and that together make it impractical.
+The ZIP Editors SHOULD treat a draft ZIP that requires or authorizes a Taking
+as conflicting with this ZIP, and SHOULD ask its Owners to address this ZIP
+explicitly before the draft is assigned a number or advanced in status.
 
-### Layer 1: Procedural entrenchment in the ZIP process
-
-1. This ZIP MAY be amended to strengthen the protection of Accrued ZCG Funds,
-   to correct errors, or to make administrative changes allowed by
-   [Future changes to ZCG funding](#future-changes-to-zcg-funding). It
-   SHALL NOT be amended, replaced or obsoleted in any way that would permit a
-   Taking.
-
-2. A later ZIP SHALL NOT be read as repealing, limiting or overriding any part
-   of this ZIP by implication. A ZIP that intends to do so MUST say so
-   explicitly in its preamble (using "Obsoletes" or "Updates") and in its
-   abstract.
-
-3. The ZIP Editors SHOULD treat a draft ZIP that requires or authorizes a
-   Taking as conflicting with an Active ZIP, and SHOULD require it to address
-   this ZIP explicitly before it is assigned a number or advanced in status.
-
-4. Any proposal to amend this ZIP in a way that would permit a Taking SHOULD,
-   at the least, require the same broader support as was sought for this ZIP
-   under [Adoption](#adoption): clear approval in both a coinholder-amount
-   voting round and a ZCAP poll (or their successors). This is a floor, not a
-   way to authorize a Taking; points 1 and 2 still apply.
-
-### Layer 2: A legal commitment that does not depend on the ZIP process
-
-The strongest protection is legal, because a contract or trust restriction
-that FPF has entered into cannot be undone by a later ZIP. See
-[Legal commitment by FPF](#legal-commitment-by-fpf).
-
-### Layer 3: Social and consensus-layer commitment
-
-[No consensus change may affect Accrued ZCG Funds](#no-consensus-change-may-affect-accrued-zcg-funds)
-asks node developers and node operators not to implement or run any change
-that singles out ZCG outputs. Because funds already paid to ZCG are held at
-ordinary addresses controlled by FPF, the only on-chain way to take them would
-be a targeted consensus change of exactly that kind.
-
-### Rationale for entrenchment (non-normative)
-
-Entrenchment is unusual in the ZIP process and should be rare. It is justified
-here because:
-
-* the clause protects a past act of issuance, not a future policy choice, so
-  it does not stop the community from setting future funding however it
-  likes;
-* it mirrors a restriction that ZIP 1015 already placed on the funds, and that
-  FPF already accepted as a Restricted Fund donation; and
-* without it, any balance ZCG holds is always one vote away from being
-  taken, which harms grantees and creates legal risk for FPF regardless of
-  whether any Taking actually happens.
+A proposal to amend this ZIP in a way that would permit a Taking SHOULD, at a
+minimum, be put to both a coinholder-amount voting round and a ZCAP poll (or
+their successors). This is a minimum bar for consideration, and does not
+authorize a Taking.
 
 ## Legal commitment by FPF
 
-Before the Effective Date, FPF SHALL enter into, and publish, a legal
-commitment, prepared with Cayman Islands counsel, that:
+FPF SHALL enter into, and publish, a legal commitment, prepared with Cayman
+Islands counsel, that:
 
 1. irrevocably restricts all Accrued ZCG Funds to the Permitted Uses;
-2. forbids each Prohibited Transfer;
-3. states that no later ZIP, vote or community decision can release the
+2. prohibits each transfer listed in [Prohibited transfers](#prohibited-transfers);
+3. states that no later ZIP, vote, or community decision can release that
    restriction;
 4. binds any successor administrator, and requires FPF to impose the same
-   commitment on any custodian or Autonomous Entity that holds Accrued ZCG
-   Funds; and
-5. names at least one party, independent of FPF and of the ZCG Committee, with
-   standing to enforce the restriction.
+   restriction on any custodian or Autonomous Entity that holds Accrued ZCG
+   Funds;
+5. gives effect to the separation of grant and treasury decisions required by
+   this ZIP; and
+6. names at least one party, independent of FPF, the ZCG Committee, and the
+   Treasury Committee, with standing to enforce it.
 
-The counterparty or counterparties to the commitment SHOULD include the Zcash
-Foundation (which ZIP 1015 already makes responsible for ZCAP) and at least one
-other organization that does not hold Accrued ZCG Funds.
+The parties to the commitment SHOULD include the Zcash Foundation and at least
+one other organization that does not hold Accrued ZCG Funds.
 
 FPF SHOULD consider, with its counsel, whether a stronger structure is
-available under Cayman Islands law, such as amending its constitution, or
-holding Accrued ZCG Funds through a purpose trust with an independent enforcer.
+available, such as an amendment to its constitution or holding Accrued ZCG
+Funds through a purpose trust with an independent enforcer.
 
-Non-normative note: ZIP 1015 requires FPF to "contractually commit" to its
-obligations, but does not name the other party to that contract, and the
-restricted-fund agreement and FPF's constitution are not public as of writing.
-This ZIP asks for the commitment to be published so that the community can
-see who can enforce it.
+If FPF determines that it cannot lawfully give this commitment in full, it SHALL
+publish that determination with its reasons, and SHOULD publish the strongest
+commitment that it can give.
 
-If FPF declares, with a thorough rationale, that it cannot lawfully give this
-commitment in full, it SHALL publish that declaration and SHOULD propose the
-strongest commitment it can give. The ZIP Owner MAY then revise this ZIP to
-match.
+## ZCG Treasury Committee
 
-## Ten-year budget, treasury plan and hedging strategy
+### Formation
 
-### Order
+ZCG SHALL establish a ZCG Treasury Committee no later than 45 days after the
+Activation Date.
 
-The ZCG Committee, with the support of FPF, SHALL prepare and publish a Treasury
-Plan on the Zcash Community Forum and on the ZCG website **no later than
-31 March 2027**.
+The ZCG Committee SHALL make the initial decisions needed to establish the
+Treasury Committee, namely:
 
-The ZCG Committee SHOULD publish a draft of the Treasury Plan for community
-comment at least 30 days before publishing the final version, and SHOULD
-respond in public to substantive comments.
+* appointing its initial members;
+* setting the initial term of each member; and
+* adopting its initial charter.
 
-FPF SHALL give the ZCG Committee all financial information, custody details,
-and professional support (including the cost of independent financial advice,
-which is an administration expense) that the ZCG Committee reasonably needs to
-prepare the Treasury Plan.
+The ZCG Committee SHALL publish these decisions on the Zcash Community Forum
+when they are made. After the Treasury Committee is established, the ZCG
+Committee has no further role in it except as required by this ZIP.
 
-This obligation applies whether or not this ZIP's Effective Date has occurred
-by then. If the Effective Date has not occurred, ZCG and FPF SHOULD still
-publish the Treasury Plan by that date.
+### Membership
 
-### Contents
+The Treasury Committee MUST have at least three members.
 
-The Treasury Plan MUST contain the three parts below. Each part SHOULD state its
-assumptions and their sources.
+No person SHALL be a member of both the ZCG Committee and the Treasury
+Committee at the same time.
 
-#### Part 1: Ten-year budget
+The restrictions on association with BP/ECC, ZF, and FPF in point 7 of the
+Reference Text apply to the Treasury Committee in the same way as to the ZCG
+Committee. A majority of Treasury Committee members MUST NOT have an
+association, as defined in that point, with FPF.
 
-A budget for each calendar year from 2027 to 2036 inclusive, that:
+Members SHOULD have relevant experience, such as in treasury management,
+finance, risk management, or digital asset custody.
 
-1. states the opening balance of Accrued ZCG Funds by asset, and its value in
-   ZEC and in US dollars, as of a recent date;
-2. projects income under at least these Accrual Rate scenarios:
-   * the current stream continues to its scheduled end at Mainnet height
-     6132390 (around late 2028) and is not renewed;
-   * the stream is renewed after the third halving at the same percentage;
-   * the stream is ended at the next network upgrade after the Treasury Plan
-     is published; and
-3. projects income under at least three ZEC price scenarios, including one in
-   which the price of ZEC falls by at least 75% from its level at the time of
-   writing and stays there;
-4. sets out planned spending by category, including at least: major grants,
-   smaller grants and community programs, dedicated resources or requests for
-   proposals, and administration (including the Discretionary Budget and
-   committee compensation);
-5. shows existing commitments (approved grants not yet paid) separately from
-   planned new spending;
-6. states the runway (the number of years that the program can continue at
-   its planned spending) in each scenario; and
-7. states the minimum level of spending ZCG would maintain to keep its core
-   program running, and how long that could last on existing Accrued ZCG
-   Funds alone.
+### Charter
 
-#### Part 2: Treasury plan
+The initial charter MUST specify:
 
-A treasury management policy that covers at least:
+* the length of members' terms, which SHOULD be staggered;
+* how later members are selected, which SHOULD be by ZCAP or a successor
+  process, in the same way as members of the ZCG Committee;
+* how members may be removed;
+* quorum and voting rules;
+* a personal trading policy meeting the requirements of
+  [Conflicts of interest and personal trading](#conflicts-of-interest-and-personal-trading);
+  and
+* how the charter may be amended.
 
-1. **Asset allocation**: target ranges for holdings in ZEC, fiat currency,
-   stablecoins (if any) and any other asset, and the reasons for them;
-2. **Liquidity reserve**: a minimum amount, held in assets with low price
-   risk, sufficient to pay committed grants for a stated period (for example
-   12 months of committed payments);
-3. **Custody and security**: who holds the keys or accounts, the signing
-   policy (for example multisignature thresholds), how keys are backed up,
-   and how this meets the "Security precautions" section of ZIP 1016;
-4. **Shielding**: whether and how ZEC holdings are kept in shielded pools,
-   and how this is reconciled with transparency to the community (for example
-   by publishing viewing keys);
-5. **Counterparties**: limits on exposure to any single bank, custodian,
-   exchange, stablecoin issuer or other counterparty;
-6. **Prohibited activities**: confirming that Accrued ZCG Funds will not be
-   lent to related parties, used as collateral for unrelated obligations,
-   or used for speculative trading, and that leverage will not be used except
-   as part of a hedge described in Part 3;
-7. **Grant denomination**: whether grants are denominated in ZEC, in US
-   dollars, or in a mix, and how this matches the asset allocation;
-8. **Decision-making**: who may approve conversions, transfers and hedges,
-   and what requires a ZCG Committee vote; and
-9. **Reporting**: how treasury actions will be reported in ZCG's quarterly
-   reports and dashboard.
+The charter MUST NOT give the ZCG Committee any power to remove Treasury
+Committee members, to direct Treasury Decisions, or to amend the charter.
 
-#### Part 3: Strategy for hedging the risk of ZEC depreciation
+Compensation of Treasury Committee members, if any, SHALL be determined in the
+same way as compensation of ZCG Committee members under point 9 of the
+Reference Text, and is an administration expense.
 
-A strategy for managing the risk that a fall in the price of ZEC makes ZCG
-unable to meet its commitments or to keep its program running. It MUST at
-least:
+### Authority
 
-1. measure ZCG's exposure: the gap between its ZEC holdings and its
-   obligations that are fixed in US dollars or other currencies, now and over
-   the budget period;
-2. describe the methods ZCG will use, which MAY include, for example:
-   scheduled conversion of part of each period's income (dollar-cost
-   averaging), holding a reserve in low-risk assets matched to committed
-   grants, denominating some grants in ZEC, buying protective options or
-   entering into collars, or other instruments;
-3. for each method, state its cost, its counterparty and custody risks, any
-   legal or regulatory constraints (including under Cayman Islands law and
-   FPF's obligations), and any effect on the ZEC market, such as the effect of
-   regular sales;
-4. set limits on the size and type of positions, and confirm that no hedge
-   will be speculative (that is, no position will increase ZCG's overall
-   exposure to price movements);
-5. set out triggers or a schedule for reviewing and rebalancing; and
-6. explain how the strategy balances reducing risk against the value of ZCG
-   remaining aligned with the success of ZEC.
+Treasury Decisions made by the Treasury Committee are final and do not require
+the approval of the ZCG Committee or FPF's board, but are subject to veto if FPF
+determines that they would violate Cayman Islands law or FPF's reporting
+requirements or other obligations, in the same way as ZCG Committee decisions
+under point 6 of the Reference Text. FPF SHALL execute Treasury Decisions that
+are not vetoed, and SHALL publish the reasons for any veto.
 
-Non-normative note: hedging means selling some ZEC or buying protection
-against a fall in its price. Some in the community may see that as a vote of
-no confidence in ZEC. The Treasury Plan is asked to address that tension
-openly rather than avoid it; the main purpose is to protect grantees and the
-program from being forced to stop work at the worst time.
+The Treasury Committee has no authority to make a Taking.
+
+### Conflicts of interest and personal trading
+
+Each Treasury Committee member MUST disclose, on appointment and in each
+quarterly report, whether they hold, or have a financial interest in, ZEC or
+financial instruments whose value depends on the price of ZEC, and the
+approximate size of that holding in ranges set by the charter.
+
+A Treasury Committee member MUST NOT trade ZEC, or instruments whose value
+depends on the price of ZEC, while they know of a Treasury Decision that has not
+yet been fully executed and disclosed, or within a period set by the charter
+before and after such a decision.
+
+A Treasury Committee member MUST recuse themselves from a Treasury Decision in
+which they have a personal financial interest other than their general holding
+of ZEC, such as an interest in a proposed counterparty or custodian.
+
+### Transparency of the Treasury Committee
+
+The Treasury Committee SHALL publish minutes of each meeting within 14 days of
+the meeting. Details of a planned trade or hedge MAY be withheld from the
+minutes until it has been executed, and SHALL be published no later than ZCG's
+next quarterly report after execution.
+
+## Separation of grant and treasury decisions
+
+### Treasury Decisions
+
+The following are Treasury Decisions:
+
+* buying, selling, or converting ZEC or any other asset held as Accrued ZCG
+  Funds, including the amount and timing of any sale or purchase;
+* setting asset allocation and the size of any liquidity reserve;
+* opening, adjusting, or closing a hedging position;
+* selecting custodians, exchanges, banks, and other treasury counterparties,
+  and, together with FPF, setting the custody and signing arrangements for
+  Accrued ZCG Funds;
+* setting the Program Budget; and
+* preparing, adopting, and updating the Treasury Plan.
+
+### Grant Decisions
+
+The following are Grant Decisions:
+
+* approving, rejecting, modifying, renewing, or terminating grants;
+* issuing requests for proposals;
+* setting and assessing grant milestones; and
+* approving disbursements from the Discretionary Budget under point 8 of the
+  Reference Text.
+
+### Rules on separation
+
+The ZCG Committee MUST NOT make Treasury Decisions.
+
+The Treasury Committee MUST NOT make Grant Decisions, and MUST NOT make a
+Treasury Decision for the purpose of favoring or disfavoring a particular grant
+or applicant.
+
+The ZCG Committee MUST NOT approve a grant, or a disbursement from the
+Discretionary Budget, that would cause total commitments in a budget period to
+exceed the amount set for that period in the Program Budget. The ZCG Committee
+MAY ask the Treasury Committee to amend the Program Budget, and SHALL publish any
+such request.
+
+Whether a grant is denominated in ZEC or in another currency is a Grant
+Decision, but the ZCG Committee SHALL follow any policy on grant denomination
+set in the Treasury Plan.
+
+## Interim restriction on the grants committee
+
+From the Activation Date until the Treasury Committee is established, the ZCG
+Committee MUST NOT make any decision to buy, sell, or convert ZEC, and MUST NOT
+set or change any budget.
+
+During that period, FPF MAY convert ZEC only to the extent needed to pay grant
+installments and administration expenses that were approved before or during
+that period and that fall due within the following 30 days. Such conversions
+SHALL be made at or shortly before the time of payment, without discretion as
+to timing, and SHALL be reported in ZCG's next quarterly report.
+
+The ZCG Committee MAY continue to make Grant Decisions during that period.
+
+## Program Budget
+
+The Treasury Committee SHALL set a Program Budget for each calendar year,
+stating the maximum total amount that may be committed in that year for:
+
+* grants; and
+* administration expenses, including the Discretionary Budget.
+
+The Program Budget MUST provide for the Discretionary Budget and committee
+compensation as determined by ZCAP under points 8 and 9 of the Reference Text.
+
+The Treasury Committee SHALL publish the Program Budget, and any amendment to
+it, on the Zcash Community Forum within 7 days of adopting it.
+
+Until the first Program Budget is adopted, no budget limit under this ZIP
+applies to Grant Decisions.
+
+## Treasury Plan
+
+### Deadline
+
+The Treasury Committee SHALL publish the Treasury Plan on the Zcash Community
+Forum and on the ZCG website no later than 31 March 2027. If the Treasury
+Committee is established later than 30 January 2027, the deadline is instead
+60 days after it is established.
+
+The Treasury Committee SHOULD publish a draft of the Treasury Plan for comment
+at least 21 days before publishing the final version, and SHOULD respond
+publicly to substantive comments.
+
+FPF SHALL provide the Treasury Committee with the financial information,
+custody details, and professional support that it reasonably needs to prepare
+the Treasury Plan. The cost of independent financial or legal advice for this
+purpose is an administration expense.
+
+### Ten-year budget
+
+The Treasury Plan MUST include a budget for each calendar year from 2027 to
+2036 inclusive that:
+
+1. states the balance of Accrued ZCG Funds by asset, with its value in ZEC and
+   in US dollars, as of a stated recent date;
+2. projects income under at least the following Accrual Rate scenarios:
+   * the ZCG Funding Stream continues to its scheduled end at Mainnet height
+     6132390 and is not renewed;
+   * the ZCG Funding Stream is renewed after that height at its current
+     percentage of the block subsidy; and
+   * the ZCG Funding Stream ends at the first network upgrade after the
+     Treasury Plan is published;
+3. considers at least three ZEC price scenarios, one of which assumes that the
+   price of ZEC falls by at least 75% from its price at the time the Treasury
+   Plan is prepared and does not recover during the budget period;
+4. sets out planned spending by category, including at least major grants,
+   smaller grants and community programs, requests for proposals, and
+   administration (including the Discretionary Budget, committee compensation,
+   and treasury costs);
+5. shows existing commitments separately from planned new spending;
+6. states the expected runway in each scenario; and
+7. states the minimum spending needed to keep the ZCG program operating, and
+   how long existing Accrued ZCG Funds alone could sustain it.
+
+### Treasury policy
+
+The Treasury Plan MUST include a treasury policy that specifies:
+
+1. target ranges for holdings in ZEC, fiat currency, stablecoins, and any other
+   asset, with reasons;
+2. a minimum liquidity reserve, held in assets with low price risk, sufficient
+   to pay committed grants for a stated period;
+3. custody and key management arrangements, including signing thresholds and
+   backups, and how they meet the "Security precautions" section of ZIP 1016;
+4. whether and how ZEC holdings are kept in shielded pools, and how the
+   community can verify balances, for example by published viewing keys or
+   periodic attestations;
+5. limits on exposure to any single bank, custodian, exchange, stablecoin
+   issuer, or other counterparty;
+6. confirmation that Accrued ZCG Funds will not be lent to related parties,
+   pledged for unrelated obligations, or used for speculative trading, and
+   that leverage will be used, if at all, only as part of a hedge described in
+   the hedging strategy;
+7. a policy on whether grants are denominated in ZEC, in US dollars, or in a
+   mix; and
+8. how treasury actions will be reported in ZCG's quarterly reports and
+   dashboard.
+
+### Hedging strategy
+
+The Treasury Plan MUST include a strategy for managing the risk that a fall in
+the price of ZEC leaves ZCG unable to meet its commitments or to sustain its
+program. The strategy MUST:
+
+1. measure ZCG's exposure, meaning the difference between its ZEC holdings and
+   its obligations fixed in US dollars or other currencies, now and over the
+   budget period;
+2. describe the methods to be used, which MAY include scheduled conversion of
+   part of each period's income, a reserve in low-risk assets matched to
+   committed grants, denominating some grants in ZEC, buying put options or
+   entering into collars, or other methods;
+3. for each method, state its expected cost, its counterparty and custody
+   risks, any legal or regulatory constraints, and any expected effect on the
+   ZEC market, such as from regular sales;
+4. set limits on the size and type of positions, and ensure that no position
+   increases ZCG's overall exposure to the price of ZEC;
+5. set a schedule or triggers for review and rebalancing; and
+6. explain how the strategy balances reducing risk against keeping ZCG's
+   interests aligned with the success of ZEC.
 
 ### Updates and reporting
 
-The ZCG Committee SHALL review the Treasury Plan at least once a year, and SHALL
-publish an updated Treasury Plan, rolled forward so that it always covers the
-next ten calendar years, no later than 31 March of each year starting in 2028.
+The Treasury Committee SHALL review the Treasury Plan at least once a year, and
+SHALL publish an updated Treasury Plan, extended so that it covers the next ten
+calendar years, no later than 31 March of each year from 2028.
 
 Each ZCG quarterly report required by ZIP 1015 SHALL include:
 
-* the balance of Accrued ZCG Funds by asset, and its value in ZEC and US
+* the balance of Accrued ZCG Funds by asset, with its value in ZEC and in US
   dollars;
-* treasury actions taken in the quarter (conversions, transfers between
-  custodians, hedges opened or closed) and their results; and
-* actual spending against the Treasury Plan budget, with an explanation of any
-  material difference.
+* the treasury actions taken in the quarter and their results; and
+* actual commitments and spending compared with the Program Budget, with an
+  explanation of any material difference.
 
-The Treasury Plan is a planning document. It does not limit the ZCG Committee's
-discretion over individual grants, but the ZCG Committee SHOULD explain in its
-quarterly reports any decision that departs materially from it.
+### Status of the Treasury Plan obligations
 
-### Status of this obligation
-
-The obligation to publish and maintain the Treasury Plan is added to the
-transparency and accountability obligations that FPF accepts on behalf of ZCG
-under the "Transparency and Accountability" section of ZIP 1015
-[^zip-1015-transparency]. A failure to publish the Treasury Plan, not promptly
-remedied, is therefore subject to ZIP 1015's existing enforcement remedy, which
-affects only the Accrual Rate and never Accrued ZCG Funds.
+The obligations in [Program Budget](#program-budget) and
+[Treasury Plan](#treasury-plan) are added to the obligations that FPF accepts on
+behalf of ZCG under the section "Transparency and Accountability" of ZIP 1015
+[^zip-1015-transparency].
 
 ## Enforcement
 
-* Any member of the community MAY publicly report a suspected breach of this
-  ZIP. The Controlling Organization concerned SHALL respond publicly within
-  30 days.
-* A breach of this ZIP by FPF is a substantial violation of FPF's obligations
-  under ZIP 1015, to which ZIP 1015's enforcement remedy applies (for future
-  accrual only).
-* The legal commitment described in
-  [Legal commitment by FPF](#legal-commitment-by-fpf) is enforceable by the
-  parties named in it, independently of the ZIP process.
-* If a Controlling Organization allows a Prohibited Transfer, it SHOULD make
-  the ZCG program whole from its own resources.
+Any member of the community MAY publicly report a suspected breach of this ZIP.
+The Controlling Organization concerned SHALL respond publicly within 30 days.
+
+A breach of this ZIP by FPF is a violation of FPF's obligations under ZIP 1015,
+to which the remedy in [ZIP 1015 enforcement remedy](#zip-1015-enforcement-remedy)
+applies, affecting only the Accrual Rate.
+
+The legal commitment described in
+[Legal commitment by FPF](#legal-commitment-by-fpf) is enforceable by the
+parties named in it, independently of the ZIP process.
+
+A Controlling Organization that permits a prohibited transfer SHOULD restore
+the amount to the ZCG program from its own resources.
 
 ## Changes to ZIP 1015
 
 In the section "Zcash Community Grants (ZCG)", after the paragraph beginning
 "FPF SHALL be contractually required to recognize the ZCG slice of the Dev Fund
-as a Restricted Fund donation", add:
+as a Restricted Fund donation", insert:
 
 > Funds that have accrued to Zcash Community Grants are protected as specified
-> in ZIP [this ZIP]. They MUST NOT be reduced, redirected, burned or otherwise
-> taken by any later ZIP, network upgrade, vote or agreement, and MUST be used
+> in ZIP [this ZIP]. They MUST NOT be reduced, redirected, burned, or otherwise
+> taken by any later ZIP, network upgrade, vote, or agreement, and MUST be used
 > only for the purposes described in this section. A later ZIP MAY change only
 > the rate at which new funds accrue.
+>
+> Treasury management decisions for these funds, including any decision to buy
+> or sell ZEC and the setting of budgets, are made by the ZCG Treasury
+> Committee as specified in ZIP [this ZIP]. The ZCG Committee MUST NOT make
+> such decisions.
 
 In the section "Transparency and Accountability", add to the list of
 obligations:
 
-> * Publication and annual update of a ten-year budget, treasury plan and
->   ZEC-depreciation hedging strategy, as specified in ZIP [this ZIP].
+> * Publication and annual update of a Program Budget and of a ten-year budget,
+>   treasury plan, and ZEC-depreciation hedging strategy, as specified in
+>   ZIP [this ZIP].
 
 ## Changes to ZIP 1016
 
 In the section "Administrative obligations and constraints", after the first
-paragraph, add:
+paragraph, insert:
 
-> Funds received by Zcash Community Grants under this ZIP are Accrued ZCG
-> Funds as defined in ZIP [this ZIP], and are protected as specified there.
-
-## Security precautions
-
-Nothing in this ZIP reduces the obligations in the "Security precautions"
-section of ZIP 1016 [^zip-1016-security]. The Treasury Plan SHOULD strengthen
-them.
+> Funds received by Zcash Community Grants under this ZIP are Accrued ZCG Funds
+> as defined in ZIP [this ZIP], and are protected and managed as specified
+> there.
 
 ## Testnet-specific considerations
 
-This ZIP has no effect on Testnet. Testnet funds have no value and are not
-Accrued ZCG Funds.
+This ZIP has no effect on Testnet. Testnet funds are not Accrued ZCG Funds.
+
+## Open questions
+
+* Should administration expenses remain Permitted Uses of Accrued ZCG Funds, as
+  in ZIP 1015, or should Accrued ZCG Funds be restricted to grants alone? This
+  draft keeps them, because the program cannot operate without them.
+* Should the definition of a grant be fixed for all ZCG funds, including those
+  that accrue in future, rather than only for funds already accrued?
+* The requirement that the ZCG Committee make "the initial decisions" for the
+  Treasury Committee is read here as appointing its first members, setting
+  their terms, and adopting its first charter. Should it also cover the first
+  Program Budget?
+* Should there be a waiting period before a former member of one committee may
+  join the other?
+* Should the size of the Discretionary Budget move from ZCAP to the Treasury
+  Committee, given that the Treasury Committee sets the Program Budget?
+* Is the 30-day exception for conversions needed to pay approved grants during
+  the interim period acceptable, or should all conversions wait for the
+  Treasury Committee?
+* Should consultation through a coinholder-amount voting round and a ZCAP poll
+  be a condition of activation rather than a recommendation?
+* Whether Cayman Islands law allows FPF to give an irrevocable restriction with
+  an independent enforcer, and who that enforcer should be, requires advice
+  from FPF's counsel.
+* For the 31 March 2027 deadline to be met without the 60-day extension, this
+  ZIP needs to become Active by mid-December 2026.
 
 
 # Rationale
 
-## Why freeze the past but not the future?
+## Rationale for protecting past funds but not future funding
 
-Emphasis on the past is deliberate. The community has a strong interest in
-being able to change how much new issuance goes to grants, including to stop
-it. It has a much weaker interest, and incurs serious costs, in being able to
-reach back and take money that was issued for a stated purpose. Splitting the
-two lets future funding debates focus on the future.
+The community has a strong interest in being able to change how much new
+issuance goes to grants, including stopping it. Its interest in being able to
+take funds already issued for a stated purpose is much weaker, and exercising
+that ability has real costs for grantees, for FPF, and for confidence in the
+neutrality of Zcash governance. Treating the two separately lets the first
+debate continue without the second.
 
-## Why restate ZIP 1015's permitted uses rather than invent new ones?
+## Rationale for reusing the ZIP 1015 permitted uses
 
-The goal is to protect the bargain under which the funds were issued, not to
-change it. Restating ZIP 1015 keeps the ZCG Committee's existing discretion,
-including over administration expenses, and avoids creating a new set of rules
-that grantees would have to learn.
+The aim is to preserve the terms on which the funds were issued. Reusing ZIP
+1015's restriction keeps the ZCG Committee's existing discretion and avoids a
+new set of rules for grantees. Fixing the Reference Text at the Activation Date
+prevents a later edit to ZIP 1015 from widening the meaning of a grant so as to
+permit a Taking indirectly.
 
-## Why allow treasury management?
+## Rationale for allowing conversion and hedging
 
-A rule that accrued funds cannot be moved for any purpose other than grants,
-read literally, could stop ZCG from converting ZEC to dollars to pay a
-dollar-denominated grant, or from hedging. That would be the opposite of what
-is intended. This ZIP treats any action that keeps the value inside the
-restricted fund as treasury management, not as a transfer out of it, and asks
-for the policy that governs it to be published.
+Read literally, a rule that accrued funds may not be moved for any purpose other
+than grants could prevent ZCG from converting ZEC to pay a grant denominated in
+US dollars, or from hedging. The ZIP therefore treats any action that keeps the
+value inside the restricted fund as treasury management, and requires the
+policy governing it to be published.
 
-## Why not require a coinholder-amount voting round to adopt this ZIP?
+## Rationale for a separate Treasury Committee
 
-Neither ZIP 1015 nor ZIP 1016 gives coinholder votes any formal role over ZCG
-funds. ZIP 1016 binds coinholder votes only to the Coinholder-Controlled Fund.
-The ZCG Committee is selected by ZCAP. This ZIP therefore asks for both a
-coinholder-amount voting round and a ZCAP poll as evidence of support, rather
-than making either one alone the deciding vote. This also avoids implying that
-a coinholder-amount voting round could later authorize a Taking.
+Separating the people who choose grants from the people who decide when to sell
+ZEC reduces the risk that grant pressure drives poorly timed sales, and limits
+the number of people with advance knowledge of ZCG's trades. It is a common
+arrangement in endowments and foundations, where an investment or finance
+committee is distinct from the program committee. Giving the ZCG Committee the
+initial appointments lets the new committee start quickly, while the charter
+restrictions prevent the grants committee from controlling it afterwards.
 
-## Why a deadline of 31 March 2027?
+The interim restriction prevents the grants committee from making large
+discretionary sales or purchases while the new committee is being formed. The
+narrow exception for conversions needed to pay approved grants is included so
+that grantees are not left unpaid during that period.
 
-It gives ZCG about four and a half months from the drafting of this ZIP,
-including a 30-day draft comment period, and means the first Treasury Plan
-is in place well before the scheduled end of the ZCG funding stream in late
-2028, and before any network upgrade that might change the Accrual Rate.
+## Rationale for the entrenchment approach
 
+A ZIP records community consensus and cannot by itself prevent a later ZIP,
+with later consensus, from reversing it. This ZIP does not rely on its own text
+alone. It combines three measures:
 
-# Open questions
+* a procedural rule in the ZIP process, under which a later ZIP cannot repeal
+  this one by implication and the ZIP Editors are asked to treat conflicting
+  drafts as such;
+* a published legal commitment by FPF, which a later ZIP cannot undo, and which
+  gives an independent party standing to enforce the restriction; and
+* a request that node developers and operators not implement or run a
+  consensus change aimed at ZCG's outputs, which is the only way funds already
+  paid to FPF-controlled addresses could be taken on-chain.
 
-1. **Scope of "grants".** Should administration expenses (the Discretionary
-   Budget and committee compensation) remain Permitted Uses, as in ZIP 1015,
-   or should accrued funds be restricted to grants only? This draft keeps
-   them, because ZIP 1015's definition of the ZCG program includes them and
-   the program cannot run without them.
-2. **Future grant-rule changes.** See the open question under
-   [Only the Accrual Rate may change](#only-the-accrual-rate-may-change).
-3. **Legal form.** Whether Cayman Islands law allows FPF to give an
-   irrevocable restriction with an independent enforcer, and who that
-   enforcer should be, needs advice from FPF's counsel.
-4. **Voluntary transfers.** This draft forbids even a voluntary transfer of
-   accrued funds to the NSM or a burn address, such as the voluntary taper
-   that ZCG itself floated in October 2026. That is intended, but it should be
-   stated clearly in any forum discussion.
-5. **Adoption bar.** Whether to make approval in a coinholder-amount voting
-   round and a ZCAP poll a hard requirement (MUST) rather than a SHOULD.
+Entrenchment should be rare in the ZIP process. It is used here because it
+protects a past act of issuance rather than a future policy choice, it restates
+a restriction FPF has already accepted, and without it any ZCG balance remains
+exposed to a single future vote.
+
+## Rationale for consulting both coinholders and ZCAP
+
+Neither ZIP 1015 nor ZIP 1016 gives coinholder votes a formal role over ZCG
+funds; coinholder votes under ZIP 1016 are binding only for the
+Coinholder-Controlled Fund, and the ZCG Committee is selected by ZCAP. Asking
+both groups gives broader evidence of support, and avoids implying that a
+coinholder-amount voting round alone could later authorize a Taking.
+
+## Rationale for the deadline
+
+A deadline of 31 March 2027 allows time to form the Treasury Committee and hold
+a comment period on a draft plan, and puts the first Treasury Plan in place well
+before the scheduled end of the ZCG Funding Stream in late 2028.
 
 
 # References
 
 [^BCP14]: [Information on BCP 14 — "RFC 2119: Key words for use in RFCs to Indicate Requirement Levels" and "RFC 8174: Ambiguity of Uppercase vs Lowercase in RFC 2119 Key Words"](https://www.rfc-editor.org/info/bcp14)
+
+[^protocol-networks]: [Zcash Protocol Specification, Version 2026.8.0. Section 3.12: Mainnet and Testnet](protocol/protocol.pdf#networks)
 
 [^zip-0000]: [ZIP 0: ZIP Process](zip-0000.rst)
 
@@ -847,7 +997,7 @@ is in place well before the scheduled end of the ZCG funding stream in late
 
 [^zip-1015]: [ZIP 1015: Block Subsidy Allocation for Non-Direct Development Funding](zip-1015.rst)
 
-[^zip-1015-zcg]: [ZIP 1015: Block Subsidy Allocation for Non-Direct Development Funding — Zcash Community Grants](zip-1015.rst#zcash-community-grants-zcg)
+[^zip-1015-zcg]: [ZIP 1015: Block Subsidy Allocation for Non-Direct Development Funding — Zcash Community Grants (ZCG)](zip-1015.rst#zcash-community-grants-zcg)
 
 [^zip-1015-decentralization]: [ZIP 1015: Block Subsidy Allocation for Non-Direct Development Funding — Furthering Decentralization](zip-1015.rst#furthering-decentralization)
 
@@ -863,6 +1013,18 @@ is in place well before the scheduled end of the ZCG funding stream in late
 
 [^zip-1016-disbursement]: [ZIP 1016: Community and Coinholder Funding Model — Disbursement process](zip-1016.md#disbursement-process)
 
+[^zip-1016-admin]: [ZIP 1016: Community and Coinholder Funding Model — Administrative obligations and constraints](zip-1016.md#administrative-obligations-and-constraints)
+
 [^zip-1016-security]: [ZIP 1016: Community and Coinholder Funding Model — Security precautions](zip-1016.md#security-precautions)
 
 [^zip-2008]: [ZIP 2008: Update to `FS_FPF_ZCG_H3` address list](zip-2008.md)
+
+[^zips-pr-1414]: [zcash/zips pull request 1414](https://github.com/zcash/zips/pull/1414)
+
+[^zips-pr-1423]: [zcash/zips pull request 1423](https://github.com/zcash/zips/pull/1423)
+
+[^zips-pr-1428]: [zcash/zips pull request 1428](https://github.com/zcash/zips/pull/1428)
+
+[^forum-zcg-taper]: [Zcash Community Forum, topic 58566 (ZCG proposal, 29 October 2026)](https://forum.zcashcommunity.com/t/58566)
+
+[^forum-fpf-reply]: [Zcash Community Forum, topic 58611, post 24 (FPF reply, 30 October 2026)](https://forum.zcashcommunity.com/t/58611/24)
