@@ -342,33 +342,27 @@ relationship to the people who run the coinholder-amount voting process.
 
 ## Applicable Conflict-of-Interest Policy
 
-The Applicable Conflict-of-Interest Policy, for a Covered Party, consists of:
+The Applicable Conflict-of-Interest Policy, for a Covered Party, consists of
+the following, as in effect at the date of the Policy Notice:
 
 1. ZIP 1015, section "Zcash Community Grants (ZCG)", point 7 [^zip-1015-zcg],
-   including the definition of "Association", and the conflict-of-interest
-   policy that governs the FPF Board of Directors to which it refers, to the
-   extent FPF has published it;
-2. ZIP 1016, section "Administrative obligations and constraints"
-   [^zip-1016-admin], which applies point 7 above to the Key-Holder
-   Organizations' administration of the Coinholder-Controlled Fund "with
-   coinholder voting replacing the role of the ZCG Committee";
-3. ZIP 1016, section "Disbursement process" [^zip-1016-disbursement],
+   including the definition of "Association" and the FPF Board policy it
+   refers to, to the extent FPF has published it;
+2. ZIP 1016, sections "Administrative obligations and constraints"
+   [^zip-1016-admin] and "Disbursement process" [^zip-1016-disbursement],
    including the statement that "No organizations or individuals are
    restricted from voting their coins";
-4. for ZIP Editors and Editor Employers, ZIP 0, section "ZIP Editors"
+3. for ZIP Editors and Editor Employers, ZIP 0, section "ZIP Editors"
    [^zip-0000-editors];
-5. any written conflict-of-interest policy of the Covered Organization
-   itself (and, for a Covered Individual, of each Covered Organization for
-   which they act); and
-6. this ZIP;
+4. any written conflict-of-interest policy of the Covered Organization, or,
+   for a Covered Individual, of each Covered Organization for which they act;
+   and
+5. this ZIP.
 
-in each case as in effect at the date of the Policy Notice.
-
-Each Covered Organization that has a written conflict-of-interest policy
-MUST publish it on the Forum no later than its first Disclosure Statement,
-and MUST publish each amended version within 14 days of its adoption. A
-Covered Organization that has no written conflict-of-interest policy MUST
-say so in each Disclosure Statement.
+Each Covered Organization MUST publish its written conflict-of-interest
+policy, if it has one, with its first Disclosure Statement and within 14 days
+of any amendment. One that has no written policy MUST say so in each
+Disclosure Statement.
 
 ## Reportable relationships
 
@@ -492,22 +486,16 @@ Reportable Relationships, in which case it MUST say so explicitly.
 
 ### Place of publication
 
-Disclosure Statements, Policy Notices, Investor Acknowledgments, and every
-other document required by this ZIP to be published, MUST be published on the
-Forum, in a single thread per Covered Organization titled
-"Conflict-of-Interest Register: [Organization name]". A ZIP Editor who has no
-Editor Employer MUST use a thread titled
-"Conflict-of-Interest Register: [Editor name]".
+Every document this ZIP requires to be published MUST be posted on the Forum,
+in one thread per Covered Organization titled "Conflict-of-Interest Register:
+[Organization name]", or, for a ZIP Editor with no Editor Employer, "[Editor
+name]". The Forum version is authoritative.
 
-The Forum operator is requested to provide a dedicated category for these
-threads. Where the Zcash Town Square ZIP [^draft-town-square] is in effect,
-its rules on edits and deletions apply to these posts. In any case, a
-published Disclosure Statement MUST NOT be deleted, and MUST NOT be edited
-except to add a clearly marked correction. Corrections that add or remove a
-Reportable Relationship MUST be made by a new post.
-
-A Covered Party MAY also publish its disclosures elsewhere, but the Forum
-version is authoritative.
+A published Disclosure Statement MUST NOT be deleted, and MUST NOT be edited
+except to add a clearly marked correction. A correction that adds or removes a
+Reportable Relationship MUST be made by a new post. Where the Zcash Town Square
+ZIP [^draft-town-square] is in effect, its rules on edits and deletions also
+apply.
 
 ### Contents
 
@@ -554,9 +542,9 @@ Before requesting an Investor Acknowledgment, the Covered Organization MUST
 send the Disclosed Party a Policy Notice, and MUST publish the same Policy
 Notice on the Forum. A Policy Notice MUST:
 
-* quote verbatim each of the provisions listed in items 1 to 4 of
+* quote verbatim each of the provisions listed in items 1 to 3 of
   [Applicable Conflict-of-Interest Policy](#applicable-conflict-of-interest-policy)
-  that apply to the Covered Party, and attach or link items 5 and 6;
+  that apply to the Covered Party, and attach or link items 4 and 5;
 * explain, in plain language, that ZIP 1016 applies the ZCG recusal policy
   to the administration of the Coinholder-Controlled Fund "with coinholder
   voting replacing the role of the ZCG Committee", that this has been read
@@ -623,103 +611,81 @@ not a breach of this ZIP.
 
 ### Signature methods
 
-A Disclosure Statement or Investor Acknowledgment MUST be signed using at
-least one of the following methods, so that any member of the community can
-verify it:
+A Disclosure Statement or Investor Acknowledgment MUST be signed in a way that
+any member of the community can verify, and the published post MUST say how to
+verify it. Acceptable methods are:
 
-1. an OpenPGP or SSH signature by a key that is verifiably linked to the
-   signer, for example because it is published on a website or domain the
-   signer controls, in a public regulatory filing, or in an earlier signed
-   post on the Forum;
-2. an electronic signature service that produces a certificate of completion
-   recording the signer's name, verified email address, and timestamp, with
-   the signed PDF and the certificate both published; or
-3. a post made from the signer's own Forum account, quoting the full text,
-   where the account is verifiably linked to the signer (for example, from the
-   signer's official website or verified social media account).
+1. an OpenPGP or SSH signature by a key verifiably linked to the signer (for
+   example, published on the signer's website or in an earlier signed Forum
+   post);
+2. an electronic signature service, with the signed PDF and its certificate of
+   completion both published; or
+3. a post from the signer's own Forum account, quoting the full text, where
+   the account is verifiably linked to the signer.
 
-In addition to one of the above, the signer MAY sign the same text with a
-Zcash address under ZIP 304 [^zip-0304] or an equivalent message-signing
-method, as evidence that it Holds ZEC. Nothing in this ZIP requires any
-Disclosed Party to reveal an address.
-
-The published post MUST include instructions for verifying the signature.
+A signer MAY also sign with a Zcash address under ZIP 304 [^zip-0304] as
+evidence that it Holds ZEC. Nothing in this ZIP requires anyone to reveal an
+address.
 
 ### Timing of acknowledgments
 
-* For Coinholder Investors disclosed in an Initial Disclosure Statement, the
-  Investor Acknowledgment MUST be published within 45 days after that
-  statement.
-* For any new Investment made after the Effective Date, the Covered
-  Organization SHOULD make delivery of a signed Investor Acknowledgment a
-  condition of closing, and MUST publish it within 30 days after the
-  Investment is first disclosed.
-* A fresh Investor Acknowledgment MUST be obtained within 60 days after any
-  material amendment to the Applicable Conflict-of-Interest Policy, and in
-  any case at least once every twelve months.
+An Investor Acknowledgment MUST be published within 45 days after the
+Investor is first disclosed, or within 30 days for an Investment made after
+the Effective Date. For new Investments, the Covered Organization SHOULD make
+a signed acknowledgment a condition of closing. A fresh acknowledgment MUST be
+obtained at least once every twelve months, and within 60 days after any
+material amendment to the Applicable Conflict-of-Interest Policy.
 
 ### Refusal or non-response
 
-If a Disclosed Party refuses to sign, or does not sign within the applicable
-deadline, the Covered Organization MUST:
+If a Disclosed Party refuses to sign, or does not sign in time, the Covered
+Organization MUST:
 
-1. publish on the Forum a "Proof of Delivery": evidence (such as a
-   delivery receipt, or an email with its full headers, redacted only of
-   personal contact details) that the Policy Notice was delivered to the
-   Disclosed Party, together with the Policy Notice's hash;
+1. publish evidence that the Policy Notice was delivered (a "Proof of
+   Delivery"), such as a delivery receipt or an email with full headers,
+   redacted only of personal contact details;
 2. mark the Disclosed Party as "Unacknowledged" in every later Disclosure
    Statement while the relationship lasts; and
-3. send the Policy Notice again, and request the acknowledgment again, at
-   least once in each Disclosure Quarter.
+3. send the Policy Notice and request the acknowledgment again at least once
+   each Disclosure Quarter.
 
-While a Disclosed Party is Unacknowledged, each Covered Individual of that
-Covered Organization MUST recuse from any decision under ZIP 1016 or ZIP 0
-that concerns a grant, proposal, or ZIP in which the Disclosed Party is known
-to have a financial interest.
+While a Disclosed Party is Unacknowledged, the Covered Organization's Covered
+Individuals MUST recuse from any decision under ZIP 1016 or ZIP 0 concerning a
+grant, proposal, or ZIP in which that party is known to have a financial
+interest.
 
-A Covered Organization that complies with this subsection is not in breach of
-this ZIP solely because a Disclosed Party refuses to sign. A Covered
-Organization that does not comply with it is Non-Compliant.
+A Covered Organization that does all of this is not in breach of this ZIP
+solely because a Disclosed Party refuses to sign. One that does not is
+Non-Compliant.
 
 ## Protected Persons
 
 A Disclosed Party is a "Protected Person" if it is a natural person who is
 not a public figure, and who is (or is Suspected to be) a Significant
-Coinholder. A natural person is a public figure for this purpose if they have
-publicly stated that they hold ZEC in an amount that would make them a
-Significant Coinholder, or if they hold an officer or director position in
-any Covered Organization or in any entity that is a Disclosed Party.
+Coinholder. A person is a public figure for this purpose if they have publicly
+stated a holding that would make them a Significant Coinholder, or hold an
+officer or director position in a Covered Organization or in an entity that is
+a Disclosed Party. Entities are never Protected Persons.
 
-Entities are never Protected Persons.
-
-For a Protected Person, the Covered Party MAY, instead of publishing the
-person's name:
-
-* identify them by a stable label of the form
-  `[Organization]-PP-[number]`, used consistently across all Disclosure
-  Statements;
-* publish all other required information about the relationship;
-* publish, in place of the signed Investor Acknowledgment, a SHA-256 hash of
-  the signed acknowledgment concatenated with a random salt of at least 128
-  bits; and
-* deliver the person's identity, the signed acknowledgment, and the salt,
-  confidentially, to each Disclosure Reviewer.
+For a Protected Person, the Covered Party MAY publish a stable label of the
+form `[Organization]-PP-[number]` instead of the person's name, together with
+all other required information and a salted SHA-256 hash of the signed
+Investor Acknowledgment. It MUST then deliver the person's identity, the
+signed acknowledgment, and the salt confidentially to each Disclosure
+Reviewer.
 
 The "Disclosure Reviewers" are:
 
 * for a Key-Holder Organization or its Covered Individuals, each other
   Key-Holder Organization; and
-* for a ZIP Editor or an Editor Employer, two ZIP Editors who are not
-  associated with the same Editor Employer, chosen by the ZIP Editors
-  collectively, and each Key-Holder Organization that is not the same
-  organization as the Editor Employer.
+* for a ZIP Editor or Editor Employer, two ZIP Editors not associated with the
+  same Editor Employer, chosen by the ZIP Editors, and each Key-Holder
+  Organization other than the Editor Employer.
 
-Each Disclosure Reviewer MUST, within 30 days, publish on the Forum a signed
-statement confirming that it received the confidential information, that the
-hash matches, and that the described relationship appears accurate, or
-stating why it cannot confirm this. Disclosure Reviewers MUST keep the
-confidential information confidential, MUST NOT use it for any other purpose,
-and MUST disclose it only if required by law.
+Within 30 days, each Disclosure Reviewer MUST publish a signed statement
+confirming that the hash matches and the relationship appears accurate, or
+saying why it cannot. Disclosure Reviewers MUST keep the information
+confidential and use it for no other purpose.
 
 ## Enforcement
 
@@ -748,28 +714,23 @@ needed to start the cure period.
 
 ### Material Omission Findings
 
-A "Material Omission" is an omission or misstatement in a Disclosure
-Statement or Pre-Vote Confirmation of a Reportable Relationship that the
-Covered Party knew of, or would have known of had it made the inquiry
-required by [Diligence](#diligence).
+A "Material Omission" is an omission or misstatement of a Reportable
+Relationship that the Covered Party knew of, or would have known of had it
+made the inquiry required by [Diligence](#diligence). If it was deliberately
+concealed, it is a "Knowing Misstatement".
 
-A Material Omission is established (a "Material Omission Finding") if:
+A Material Omission is established (a "Material Omission Finding") if the
+Covered Party admits it, or if a signed finding is published on the Forum:
 
-* the Covered Party admits it, for example by publishing a correction more
-  than 14 days after it became aware of the omitted relationship; or
-* for a Key-Holder Organization or its Covered Individuals, every other
-  Key-Holder Organization publishes a signed finding to that effect on the
-  Forum; or
-* for a ZIP Editor or an Editor Employer, a consensus of the other ZIP
-  Editors (excluding any ZIP Editor associated with the same Editor
-  Employer), or every Key-Holder Organization not associated with the
-  subject, publishes a signed finding to that effect on the Forum.
+* for a Key-Holder Organization or its Covered Individuals, by every other
+  Key-Holder Organization; or
+* for a ZIP Editor or Editor Employer, by a consensus of the other ZIP Editors
+  (excluding those associated with the same Editor Employer), or by every
+  Key-Holder Organization not associated with the subject.
 
-Before a finding is published, the subject MUST be given at least 14 days'
-notice on the Forum and the opportunity to respond publicly.
-
-A Material Omission that the Covered Party knew of and deliberately concealed
-is a "Knowing Misstatement", and a finding that establishes it MUST say so.
+The subject MUST be given at least 14 days' notice on the Forum and the chance
+to respond publicly before a finding is published. A finding of a Knowing
+Misstatement MUST say so.
 
 ### Consequences for Key-Holder Organizations
 
@@ -849,16 +810,14 @@ statement that they have done so.
 
 ### Compliance reporting
 
-Each Key-Holder Organization MUST include in each quarterly report it
-publishes in respect of the Coinholder-Controlled Fund a statement of its
-compliance status under this ZIP, and the compliance status of each of its
-Covered Individuals, with links to its Conflict-of-Interest Register thread.
+Each Key-Holder Organization MUST state its compliance status, and that of its
+Covered Individuals, in each quarterly report it publishes on the
+Coinholder-Controlled Fund.
 
-The Key-Holder Organizations MUST jointly maintain, as the first post of a
-Forum thread titled "Conflict-of-Interest Register: Index", a list of every
-Covered Party, a link to its register thread, the date of its most recent
-Disclosure Statement, and its current compliance status. The list MUST be
-updated within 7 days of any change.
+The Key-Holder Organizations MUST jointly keep an index thread on the Forum,
+titled "Conflict-of-Interest Register: Index", listing every Covered Party,
+its register thread, the date of its latest Disclosure Statement, and its
+compliance status, updated within 7 days of any change.
 
 ## Changes to ZIP 0
 
@@ -914,22 +873,16 @@ information when it votes, without requiring continuous reporting.
 
 ## Why any amount for investors, but US$1 million for affiliations
 
-An investor in a Covered Organization already has a direct financial
-interest in decisions that affect it. If that investor holds any ZEC at all,
-it can vote in a coinholder-amount voting round that funds or harms the
-organization it has invested in, so the relationship is relevant regardless
-of the size of its holding.
+An investor in a Covered Organization already has a direct interest in
+decisions that affect it. If it holds any ZEC, it can vote in a round that
+funds or harms the organization it invested in, so the size of its holding
+does not matter.
 
 Personal and business affiliations are far more numerous, and most involve
-people whose holdings could not influence a vote. The US$1 million threshold
-limits these disclosures to affiliations with holders large enough to matter
-in practice. At recent prices, US$1 million is somewhat under 1,000 ZEC,
-which is small relative to the 420,000 ZEC quorum but large enough to be
-meaningful in combination with other holders, and to give the holder
-meaningful access and influence.
-
-The threshold is set in US dollars rather than ZEC so that it tracks the
-real-world significance of a holding as the price changes.
+people whose holdings could not affect a vote. The US$1 million threshold
+(somewhat under 1,000 ZEC at recent prices) limits these disclosures to
+holders large enough to matter. It is set in US dollars so that it tracks the
+real significance of a holding as the price changes.
 
 ## Why "Suspected"
 
@@ -942,27 +895,19 @@ rather than on the community.
 
 ## Why signed acknowledgments, published on the Forum
 
-The problem this ZIP addresses is that nobody outside the
-relevant organizations can tell whether large coinholders who fund them know
-about, or intend to respect, the existing conflict-of-interest provisions. An
-unsigned statement by the Covered Party that "our investors are aware" is
-not independently verifiable. A signed acknowledgment from the investor
-itself, published where the community already discusses governance, is.
-
-Requiring the Policy Notice to quote the ZIP text verbatim, and to explain
-that its interpretation is disputed, ensures that investors acknowledge the
-actual text rather than a summary that may be favorable to one reading.
+An unsigned statement by a Covered Party that "our investors are aware" cannot
+be checked. A signed acknowledgment from the investor, published on the Forum,
+can. Quoting the ZIP text verbatim, and saying that its meaning is disputed,
+means investors acknowledge the actual text and not a convenient summary.
 
 ## Why investor refusal is not itself non-compliance
 
-A Covered Organization cannot compel an existing investor to sign anything.
-Treating a refusal as the Covered Organization's own non-compliance would
-let any single investor disable a Key-Holder Organization or suspend a ZIP
-Editor. Instead, this ZIP requires the refusal to be published, requires
-proof that the investor was told about the policy, and requires Covered
-Individuals to recuse from matters in which an unacknowledged investor has
-an interest. For new investments, it asks Covered Organizations to make
-acknowledgment a condition of closing.
+A Covered Organization cannot force an existing investor to sign anything. If
+a refusal counted as the organization's own non-compliance, any one investor
+could disable a Key-Holder Organization or suspend a ZIP Editor. Instead, the
+refusal is published with proof that the investor was told, and the
+organization's people recuse from matters in which that investor has an
+interest.
 
 ## Why Key-Holder Organizations keep signing disbursements
 

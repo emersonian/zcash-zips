@@ -123,15 +123,12 @@ funds if the Zcash community considers it worthwhile" [^zip-2003]. It also
 says the ability to spend Sprout funds may never be re-enabled. That leaves
 Sprout holders with no assured remedy.
 
-Some of these holders may have had little practical opportunity to move their
-funds. The deprecation of zcashd removed the only maintained software that
-still provided wallet functionality for Sprout [^zip-2003], and NU7 waived the
-usual requirement that the activation height exceed the deprecation height of
-the last unsupported software release, along with the recommendation of about
-three months' notice after the first supporting release [^zip-0259]. Holders
-who were offline, who held keys in cold storage, who were incapacitated, or who
-hold funds as part of an estate or under a custodial arrangement may only learn
-of the change after their funds have been stranded.
+Some holders had little practical chance to move their funds. The deprecation
+of zcashd removed the last maintained Sprout wallet [^zip-2003], and NU7 waived
+the usual notice period before activation [^zip-0259]. Holders who were
+offline, kept keys in cold storage, were incapacitated, or hold funds through
+an estate or custodian may learn of the change only after their funds are
+stranded.
 
 The same problem may recur. ZIP 2005 anticipates that the legacy Orchard,
 Sapling, and Sprout protocols may be switched off to protect against
@@ -140,17 +137,11 @@ in those pools permanently unspendable [^zip-2005-effects]. A standing,
 pool-neutral reserve and a single claims framework are simpler and fairer than
 a separate debate each time a pool is retired.
 
-Making a remedy available, even a partial one, supports the credibility of
-Zcash as a store of value. A holder should not lose funds solely because
-the network removed the protocol that their funds were held under. The
-Coinholder-Controlled Fund is the natural source for such a remedy: it is
-Protocol-defined Ecosystem Funding, coinholders control its use, and the
-change that strands the funds was adopted for the benefit of the whole
-ecosystem.
-
-Setting the reserve aside at the time of the vote, rather than when a claims
-process is ready, ensures that the funds remain available while the claims
-process is designed, and that later grant decisions cannot spend them.
+A holder should not lose funds solely because the network removed the
+protocol they were held under, and even a partial remedy supports the
+credibility of Zcash as a store of value. The Coinholder-Controlled Fund is
+the natural source: coinholders control it, and the change that strands the
+funds was made for the benefit of the whole ecosystem.
 
 
 # Privacy Implications
@@ -239,18 +230,11 @@ depend on choosing a price oracle.
 
 From the moment the Adoption Vote closes with a result approving this ZIP,
 8,000 ZEC of the Coinholder-Controlled Fund held by the Key-Holder
-Organizations is encumbered for the Claims Reserve.
-
-From that moment, and until the Claims Reserve has been transferred to the
-Reserve Account in full, the Key-Holder Organizations MUST NOT sign any
-transaction spending Coinholder-Controlled Fund assets, other than:
-
-* a transaction that transfers funds to the Reserve Account; or
-* a payment for a grant that was approved in an earlier coinholder-amount
-  voting round, if after that payment the funds remaining under the
-  Key-Holder Organizations' control are at least 8,000 ZEC plus any amount
-  still to be transferred under
-  [Shortfall at the Adoption Date](#shortfall-at-the-adoption-date).
+Organizations is encumbered for the Claims Reserve. Until it has been
+transferred to the Reserve Account in full, the Key-Holder Organizations MUST
+NOT sign any transaction spending Coinholder-Controlled Fund assets, except a
+transfer to the Reserve Account or a payment for a previously approved grant
+that leaves enough under their control to complete the transfer.
 
 The Key-Holder Organizations MUST transfer the Claims Reserve to the Reserve
 Account no later than 14 days after the Adoption Date.
@@ -258,59 +242,40 @@ Account no later than 14 days after the Adoption Date.
 ## Funding source
 
 The Claims Reserve MUST be funded from Coinholder-Controlled Fund assets that
-the Key-Holder Organizations can spend, including the funds received under the
-one-time lockbox disbursement of ZIP 271 [^zip-0271] and any assets acquired
-with or derived from them.
-
-The Claims Reserve MUST NOT be funded from ZCG funds, from the Key-Holder
-Organizations' own funds, or from Stranded Funds.
-
-The Claims Reserve SHALL take priority over any grant approved in a
-coinholder-amount voting round that closes after the Adoption Vote.
+the Key-Holder Organizations can spend, including the ZIP 271 one-time
+disbursement [^zip-0271] and anything derived from it. It MUST NOT be funded
+from ZCG funds, the Key-Holder Organizations' own funds, or Stranded Funds. It
+takes priority over any grant approved in a later coinholder-amount voting
+round.
 
 ### Shortfall at the Adoption Date
 
-If, at the Adoption Date, the Coinholder-Controlled Fund assets that the
-Key-Holder Organizations can spend total less than 8,000 ZEC after payments
-for previously approved grants that are already due, then:
-
-* the Key-Holder Organizations MUST transfer all such assets to the Reserve
-  Account within 14 days of the Adoption Date; and
-* any later Coinholder-Controlled Fund assets that come under the control of
-  the Key-Holder Organizations, for example by a future ZIP that defines a
-  disbursement mechanism for funds accruing in the in-protocol lockbox
-  [^zip-1015-lockbox], MUST first be used to bring the Reserve Account up to
-  8,000 ZEC before being used for any other purpose.
-
-The Key-Holder Organizations MUST publish the amount of any shortfall within
-14 days of the Adoption Date, and MUST publish each later top-up.
+If the spendable Coinholder-Controlled Fund assets at the Adoption Date,
+after previously approved grants that are already due, are less than 8,000
+ZEC, the Key-Holder Organizations MUST transfer all of them to the Reserve
+Account within 14 days, and MUST publish the shortfall. Any later
+Coinholder-Controlled Fund assets that come under their control, for example
+through a future lockbox disbursement mechanism [^zip-1015-lockbox], MUST
+first be used to bring the reserve up to 8,000 ZEC. Each top-up MUST be
+published.
 
 ## Reserve Account
 
 The Reserve Account MUST be a separate address, or set of addresses, used only
-for the Claims Reserve. The Claims Reserve MUST NOT be commingled with any
-other funds, including other Coinholder-Controlled Fund assets.
+for the Claims Reserve and never commingled with other funds. It MUST be
+controlled by the Key-Holder Organizations under a spending threshold at least
+as strict as that of the main Coinholder-Controlled Fund multisig (2-of-3 at
+the time of writing [^zip-0271]), and MUST pass to any new Key-Holder
+Organizations in the same way. A threshold scheme such as FROST [^zip-0312]
+MAY be used.
 
-The Reserve Account MUST be controlled by all of the Key-Holder Organizations
-under a spending threshold at least as strict as that of the multisig used for
-the rest of the Coinholder-Controlled Fund (2-of-3 at the time of writing
-[^zip-0271]). A threshold signature scheme such as FROST [^zip-0312] MAY be
-used. If the membership of the Key-Holder Organizations changes, control of
-the Reserve Account MUST be transferred to the new Key-Holder Organizations in
-the same way as the rest of the Coinholder-Controlled Fund.
-
-The Reserve Account MAY be a transparent address or a shielded address. If it
-is a shielded address, the Key-Holder Organizations MUST publish a full viewing
-key or incoming and outgoing viewing keys sufficient for anyone to verify the
-balance of the Reserve Account and every transaction to and from it.
-
-The Key-Holder Organizations MUST publish the Reserve Account address (and any
-viewing keys) on the Zcash Community Forum within 7 days of the Adoption Date,
-and MUST publish a signed statement of the Reserve Account balance at least
-once per quarter.
+If the Reserve Account is shielded, the Key-Holder Organizations MUST publish
+viewing keys sufficient for anyone to verify its balance and transactions.
+They MUST publish the address (and any viewing keys) on the Forum within 7
+days of the Adoption Date, and a signed balance statement at least quarterly.
 
 The Claims Reserve MUST be held as ZEC. It MUST NOT be invested, lent, staked,
-pledged as collateral, or exchanged for any other asset.
+pledged, or exchanged for any other asset.
 
 ## Permitted uses
 
@@ -333,50 +298,26 @@ upgrade, and MUST publicly report any such move within 7 days.
 ## Claims process (TBD)
 
 The claims process is to be specified in a separate Claims Process ZIP, which
-MUST itself be approved in a coinholder-amount voting round before any claim is
-paid. Until a Claims Process ZIP is Active, the Key-Holder Organizations MUST
-NOT pay any claim from the Claims Reserve.
+MUST itself be approved in a coinholder-amount voting round. Until a Claims
+Process ZIP is Active, the Key-Holder Organizations MUST NOT pay any claim from
+the Claims Reserve.
 
-The Claims Process ZIP is expected to address at least the following. Each
-item below is a placeholder.
+[TBD: The Claims Process ZIP will need to settle at least:
 
-1. Eligibility: [TBD: which Deprecated Pools, and which Stranded Funds, are
-   eligible. Whether funds that entered a pool after a public deprecation
-   announcement are treated differently. Whether there is a minimum claim.]
-2. Proof of holding: [TBD: how a claimant proves that they held spending
-   authority for specific Stranded Funds at the relevant activation height,
-   and that those funds were not spent before it, without revealing more than
-   necessary. For Sprout, this might use a zero-knowledge proof of knowledge
-   of a spending key for an unspent note in the Sprout note commitment tree at
-   the NU7 activation height, verified off-chain.]
-3. Preventing double recovery: [TBD: how to stop the same Stranded Funds
-   being claimed twice, for example by publishing a nullifier or other unique
-   tag for each claimed note, and what happens if spending from that pool is
-   later re-enabled.]
-4. Successors and custodians: [TBD: how estates, heirs, custodians,
-   exchanges, and holders of funds on behalf of others establish their right to
-   claim, and how conflicting claims are resolved.]
-5. Claim window: [TBD: when claims open and close, and how the window is
-   announced.]
-6. Payout formula: [TBD: whether claims are paid 1 ZEC per ZEC of Stranded
-   Funds, or pro rata if total valid claims exceed the Claims Reserve, and
-   whether claims are paid in one batch at the end of the window or as they
-   are approved.]
-7. Legal compliance: [TBD: what, if any, identity or sanctions screening
-   the Key-Holder Organizations need to perform, and how to keep it to the
-   minimum required by law.]
-8. Privacy: [TBD: how claimant privacy is protected, including payment to
-   shielded addresses and limits on what the Key-Holder Organizations publish
-   about claimants.]
-9. Disputes: [TBD: how a claimant can challenge a rejected claim, and who
-   decides.]
-10. Administration costs: [TBD: whether reasonable costs of running the
-    claims process may be paid from the Claims Reserve, and any cap.]
-11. Unclaimed funds: [TBD: what happens to any part of the Claims Reserve
-    that remains after the claim window closes; see also
-    [Release of the reserve](#release-of-the-reserve).]
-12. Reporting: [TBD: what aggregate statistics the Key-Holder
-    Organizations publish about claims received, approved, rejected, and paid.]
+* eligibility, including which pools and funds qualify and any minimum claim;
+* how a claimant proves they held unspent Stranded Funds at the relevant
+  activation height without revealing more than necessary (for Sprout,
+  perhaps a zero-knowledge proof of knowledge of a spending key for an unspent
+  note, verified off-chain);
+* how to prevent the same funds being claimed twice, including if spending is
+  later re-enabled;
+* how estates, heirs, and custodians claim, and how conflicting claims are
+  resolved;
+* the claim window, the payout formula (1 ZEC per ZEC, or pro rata if claims
+  exceed the reserve), and the timing of payments;
+* any legally required screening, kept to the minimum, and claimant privacy;
+  and
+* disputes, administration costs, unclaimed funds, and aggregate reporting.]
 
 ## Release of the reserve
 
@@ -457,11 +398,10 @@ ZIP can pay them pro rata, and coinholders can vote to add to the reserve.
 
 ## Why set aside at the time of the vote
 
-Designing a claims process for Sprout is a substantial piece of work (it may
-need a new zero-knowledge proof of historical note ownership). If the reserve
-were only created once that work was done, the Coinholder-Controlled Fund might
-already have been spent on grants. Encumbering the funds when the vote closes
-removes that risk and gives holders an assurance in the meantime.
+Designing a claims process for Sprout is substantial work, and may need a new
+zero-knowledge proof of historical note ownership. If the reserve were created
+only once that work was done, the fund might already have been spent on
+grants. Encumbering the funds when the vote closes removes that risk.
 
 ## Why a separate account
 

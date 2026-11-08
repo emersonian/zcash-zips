@@ -95,32 +95,20 @@ participation requirement is a floor on legitimacy, not a second vote.
 
 # Motivation
 
-ZIP 1016 requires a minimum of 420,000 ZEC (2% of the total eventual supply)
-to be voted, with a simple majority cast in favor, for a grant proposal to be
-approved [^zip-1016-disbursement]. ZIP 1016 itself lists "Is
-420,000 ZEC the right threshold for coinholder votes?" as an open question
-[^zip-1016-open-questions].
-
-The threshold counts coins, never people. As of late 2026, at least two
-single holders control a large fraction of that threshold:
-
-| Holder | ZEC held | Share of the 420,000 ZEC threshold | Share of 600,000 ZEC |
-|---|---|---|---|
-| Grayscale Zcash ETF (ZCSH) | ~594,293 ZEC (2026-10-30) [^grayscale] | 141% | 99% |
-| Cypherpunk Technologies (Nasdaq: CYPH) | ~326,417 ZEC (2026-09-30) [^blockworks-q3] | 78% | 54% |
-
-Under the current rule, a single holder could supply the entire turnout of a
-coinholder-amount voting round alone, and a vote in which no one else took
-part would be valid. The author does not claim that either entity has voted,
-or would vote in this way. The concern is that the rules permit it, and so a
-result cannot by itself demonstrate that the community of coinholders, rather
-than one balance sheet, supported a grant.
+ZIP 1016 requires a minimum amount of ZEC to be voted, with a simple majority
+in favor, for a grant proposal to be approved [^zip-1016-disbursement]. That
+threshold counts coins, never people. As of late 2026, the Grayscale Zcash ETF
+alone held about 594,293 ZEC [^grayscale], more than the whole 420,000 ZEC
+threshold, and Cypherpunk Technologies about 326,417 ZEC [^blockworks-q3].
+A single holder could therefore make a vote valid with no one else taking
+part. The author does not claim that anyone has done so. The concern is that a
+result alone cannot show that coinholders in general, rather than one balance
+sheet, supported a grant.
 
 The companion quorum draft [^draft-quorum] raises the threshold to 600,000
-ZEC, so that at current holdings no single known holder can make a vote valid
-by itself. A coin threshold alone can always be met by whoever accumulates
-enough coins, however, so this ZIP requires a minimum number of distinct
-humans to have taken part.
+ZEC, but any coin threshold can be met by whoever accumulates enough coins.
+This ZIP therefore also requires a minimum number of distinct humans to have
+taken part.
 
 Counting humans requires a method for verifying personhood. Today no ZIP
 defines "coinholder" [^zip-1016], and the voting model that ZIP 1016 says will
@@ -429,8 +417,6 @@ human visible.
 [^zip-1016-disbursement]: [ZIP 1016: Community and Coinholder Funding Model, Disbursement process](zip-1016.md#disbursement-process)
 
 [^zip-1016-veto]: [ZIP 1016: Community and Coinholder Funding Model, Veto process](zip-1016.md#veto-process)
-
-[^zip-1016-open-questions]: [ZIP 1016: Community and Coinholder Funding Model, Open questions](zip-1016.md#open-questions)
 
 [^draft-quorum]: [Draft ZIP: Update to ZIP 1016: Raise the Coinholder Vote Threshold to 600,000 ZEC](draft-emersonian-coinholder-vote-quorum.md)
 

@@ -131,24 +131,17 @@ In practice, important announcements are increasingly made first, and
 sometimes only, on X and other commercial platforms. This creates several
 problems:
 
-* Fragmentation: a coinholder who wants to follow what funded organizations
-  have said must monitor many accounts across many platforms, some of which
-  are invite-only (Discord servers, Telegram groups, Signal chats).
-* Access: several commercial platforms require an account or login to read
-  posts or threads in full, rate-limit readers, or rank posts algorithmically
-  so that announcements are never shown to many interested readers.
-* Durability: posts on Other Platforms can be edited, deleted, or lost when
-  an account is suspended, locked, or sold, or when a platform changes its
-  policies or shuts down. The record of what a funded organization committed to
-  can disappear.
-* Discussion: short-form platforms are poorly suited to the careful,
-  threaded, long-form debate that governance decisions need, and responses are
-  scattered across quote-posts and replies that cannot be collected in one
-  place.
-* Capture risk: when the community's primary channel is a single commercial
-  platform, the policies and owner of that platform gain influence over Zcash
-  governance discussion that the Zcash community did not grant and cannot
-  revoke.
+* Fragmentation: following what funded organizations have said means
+  watching many accounts on many platforms, some of them invite-only.
+* Access: several platforms require a login to read in full, rate-limit
+  readers, or rank posts so that many interested readers never see them.
+* Durability: posts can be edited, deleted, or lost when an account is
+  suspended or sold, or a platform changes its rules or shuts down, so the
+  record of what an organization committed to can disappear.
+* Discussion: short-form platforms suit careful, threaded debate poorly, and
+  replies scatter across quote-posts that cannot be collected in one place.
+* Capture risk: if the main channel is one commercial platform, its owner
+  gains influence over Zcash governance that the community never granted.
 
 The Forum already plays a central role in Zcash governance. ZIP 0 [^zip-0000]
 directs ZIP authors to post new ideas there and asks Editors to check that
@@ -337,33 +330,21 @@ sufficient, and it SHOULD link to each of them.
 
 ### Content of cross-posts
 
-A cross-post MUST:
+A cross-post MUST include the full text of the Announcement (every post, for a
+thread), its attachments or working links to them, a link to the original on
+each Other Platform, the name or handle of the Covered Speaker (and, for an
+Executive, their role and organization), and the UTC date and time it was
+first made. A link alone is not a cross-post.
 
-* include the full text of the Announcement, or for a thread of posts, the full
-  text of every post in the thread;
-* include any images, documents, or other attachments, or a working link to
-  each of them;
-* include a link to the original Announcement on each Other Platform where it
-  was made;
-* state the name or public handle of the Covered Speaker and, for an Executive,
-  their role and the Covered Organization; and
-* state the date and time (in UTC) at which the Announcement was first made.
+For audio or video, the cross-post MUST include a link to the recording and a
+written summary of each matter announced, and SHOULD include a transcript
+where one exists. For an Announcement not in English, it MUST include the
+original text and SHOULD include an English translation.
 
-A cross-post MUST NOT consist only of a link to the Announcement.
-
-For an Announcement made in audio or video form, the cross-post MUST include a
-link to the recording and a written summary of each matter announced, and
-SHOULD include a transcript where one is available.
-
-For an Announcement made in a language other than English, the cross-post MUST
-include the original text and SHOULD include an English translation.
-
-A cross-post MUST be made from a Forum account that is listed for the Covered
-Speaker in the register specified in [Register of Covered Speakers], and MUST
-be posted in the Forum category designated for Announcements under
-[Forum Categories], or, where the Announcement relates to an existing Forum
-thread (for example the thread for a ZIP or grant), in that thread with a link
-from the Announcements category.
+A cross-post MUST be made from a Forum account listed for the Covered Speaker
+in the [Register of Covered Speakers], in the Announcements category under
+[Forum Categories], or in a relevant existing thread (such as the thread for a
+ZIP or grant) with a link from the Announcements category.
 
 ### Edits and deletions
 
@@ -377,57 +358,37 @@ in that case the reason MUST be stated in the cross-post.
 
 ## Register of Covered Speakers
 
-Each Covered Organization MUST publish on the Forum, and keep current, a
-register listing:
+Each Covered Organization MUST publish on the Forum, and update within 7 days
+of any change, a register of its Executives (by the name or handle under which
+they act for it, with their role), its Official Accounts, and the Forum and
+Other Platform accounts each of them uses for Announcements.
 
-* each of its Executives, identified by the name or public handle under which
-  they act for the organization, and their role;
-* each of its Official Accounts; and
-* for each Executive and for the organization, the Forum account or accounts
-  from which cross-posts will be made, and the accounts on Other Platforms
-  through which they make Announcements.
+FPF, for ZCG, and the Key-Holder Organizations, for the Coinholder-Controlled
+Fund, MUST each keep on the Forum a list of the Covered Organizations they
+fund, linking to each register.
 
-The register MUST be updated within 7 days of any change.
-
-FPF, on behalf of ZCG, and the Key-Holder Organizations, for the
-Coinholder-Controlled Fund, MUST each maintain on the Forum a list of the
-Covered Organizations that receive funds from the Zcash Funding Sources they
-administer, with a link to each organization's register.
-
-Nothing in this section requires any person to disclose their legal name or any
-information that they have not already made public.
+Nothing in this section requires anyone to disclose their legal name or any
+information they have not already made public.
 
 ## Forum Categories
 
-The operator of the Forum is requested to maintain:
+The operator of the Forum is requested to maintain a category for
+Announcements by Covered Speakers (limited to cross-posts and replies), and a
+category or thread for reports of non-compliance under [Enforcement].
 
-* a category for Announcements by Covered Speakers, in which only cross-posts
-  and replies to them are permitted; and
-* a category or thread for reports of non-compliance under [Enforcement].
-
-If the operator of the Forum is itself a Covered Organization, it MUST
-maintain these categories, and MUST additionally:
-
-* publish its moderation policy on the Forum;
-* not remove, hide, or edit a cross-post made under this ZIP, or a report of
-  non-compliance, except for spam, illegal content, or doxxing, and record any
-  such action, with its reason, in a public moderation log on the Forum; and
-* make a complete public archive of the Announcements category available for
-  download at least once per quarter.
+If the operator is itself a Covered Organization, it MUST maintain these, MUST
+publish its moderation policy, MUST NOT remove, hide, or edit a cross-post or
+non-compliance report except for spam, illegal content, or doxxing (recording
+each such action and its reason in a public moderation log), and MUST publish
+a downloadable archive of the Announcements category at least quarterly.
 
 ## Compliance Reporting
 
-Each Covered Organization that is subject to quarterly reporting under ZIP 1014
-[^zip-1014], ZIP 1015 [^zip-1015-transparency], or ZIP 1016 MUST include in each
-quarterly report:
-
-* a statement that it, its Executives, and its Official Accounts complied with
-  this ZIP during the quarter, or a description of any non-compliance and how it
-  was remedied; and
-* a link to its register.
-
-Covered Organizations that are grantees SHOULD include the same statement in
-each milestone report submitted for a grant from a Zcash Funding Source.
+Each Covered Organization that reports quarterly under ZIP 1014 [^zip-1014],
+ZIP 1015 [^zip-1015-transparency], or ZIP 1016 MUST state in each quarterly
+report whether it, its Executives, and its Official Accounts complied with
+this ZIP, describe any non-compliance and how it was remedied, and link to its
+register. Grantees SHOULD include the same statement in milestone reports.
 
 ## Enforcement
 

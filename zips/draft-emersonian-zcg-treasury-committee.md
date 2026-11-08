@@ -246,6 +246,12 @@ The Treasury Committee MUST have at least three members.
 No person SHALL be a member of both the ZCG Committee and the Treasury
 Committee at the same time.
 
+No person who is a member of the ZCG Committee on the Activation Date, or who
+has been a member at any time in the 12 months before their appointment, SHALL
+be appointed to the Treasury Committee. No person SHALL join the ZCG Committee
+within 12 months after leaving the Treasury Committee. A person who resigns
+from the ZCG Committee does not become eligible sooner by doing so.
+
 The restrictions on association with BP/ECC, ZF, and FPF in point 7 of the
 Reference Text apply to the Treasury Committee in the same way as to the ZCG
 Committee. A majority of Treasury Committee members MUST NOT have an
@@ -433,47 +439,40 @@ The Treasury Plan MUST include a budget for each calendar year from 2027 to
 
 The Treasury Plan MUST include a treasury policy that specifies:
 
-1. target ranges for holdings in ZEC, fiat currency, stablecoins, and any other
-   asset, with reasons;
-2. a minimum liquidity reserve, held in assets with low price risk, sufficient
+1. target ranges for holdings in ZEC, fiat currency, stablecoins, and other
+   assets, with reasons, and a minimum low-risk liquidity reserve sufficient
    to pay committed grants for a stated period;
-3. custody and key management arrangements, including signing thresholds and
-   backups, and how they meet the "Security precautions" section of ZIP 1016;
-4. whether and how ZEC holdings are kept in shielded pools, and how the
-   community can verify balances, for example by published viewing keys or
-   periodic attestations;
-5. limits on exposure to any single bank, custodian, exchange, stablecoin
+2. custody and key management arrangements, including signing thresholds and
+   backups, consistent with the "Security precautions" section of ZIP 1016;
+3. whether ZEC is kept in shielded pools, and how the community can verify
+   balances (for example by viewing keys or periodic attestations);
+4. limits on exposure to any single bank, custodian, exchange, stablecoin
    issuer, or other counterparty;
-6. confirmation that Accrued ZCG Funds will not be lent to related parties,
+5. confirmation that Accrued ZCG Funds will not be lent to related parties,
    pledged for unrelated obligations, or used for speculative trading, and
-   that leverage will be used, if at all, only as part of a hedge described in
-   the hedging strategy;
-7. a policy on whether grants are denominated in ZEC, in US dollars, or in a
-   mix; and
-8. how treasury actions will be reported in ZCG's quarterly reports and
+   that leverage will be used, if at all, only within a hedge described in the
+   hedging strategy;
+6. whether grants are denominated in ZEC, in US dollars, or a mix; and
+7. how treasury actions will be reported in ZCG's quarterly reports and
    dashboard.
 
 ### Hedging strategy
 
 The Treasury Plan MUST include a strategy for managing the risk that a fall in
-the price of ZEC leaves ZCG unable to meet its commitments or to sustain its
-program. The strategy MUST:
+the price of ZEC leaves ZCG unable to meet its commitments. The strategy MUST:
 
-1. measure ZCG's exposure, meaning the difference between its ZEC holdings and
-   its obligations fixed in US dollars or other currencies, now and over the
-   budget period;
+1. measure ZCG's exposure: the gap between its ZEC holdings and its
+   obligations fixed in other currencies, now and over the budget period;
 2. describe the methods to be used, which MAY include scheduled conversion of
-   part of each period's income, a reserve in low-risk assets matched to
-   committed grants, denominating some grants in ZEC, buying put options or
-   entering into collars, or other methods;
-3. for each method, state its expected cost, its counterparty and custody
-   risks, any legal or regulatory constraints, and any expected effect on the
-   ZEC market, such as from regular sales;
-4. set limits on the size and type of positions, and ensure that no position
-   increases ZCG's overall exposure to the price of ZEC;
-5. set a schedule or triggers for review and rebalancing; and
-6. explain how the strategy balances reducing risk against keeping ZCG's
-   interests aligned with the success of ZEC.
+   income, a low-risk reserve matched to committed grants, denominating some
+   grants in ZEC, put options or collars, or other methods, with each method's
+   expected cost, counterparty and custody risks, legal constraints, and
+   likely effect on the ZEC market;
+3. set limits on the size and type of positions, so that no position increases
+   ZCG's overall exposure to the price of ZEC;
+4. set a schedule or triggers for review and rebalancing; and
+5. explain how it balances reducing risk against keeping ZCG's interests
+   aligned with the success of ZEC.
 
 ### Updates and reporting
 
@@ -533,8 +532,6 @@ This ZIP has no effect on Testnet. Testnet funds are not Accrued ZCG Funds.
   Treasury Committee is read here as appointing its first members, setting
   their terms, and adopting its first charter. Should it also cover the first
   Program Budget?
-* Should there be a waiting period before a former member of one committee may
-  join the other?
 * Should the size of the Discretionary Budget move from ZCAP to the Treasury
   Committee, given that the Treasury Committee sets the Program Budget?
 * Is the 30-day exception for conversions needed to pay approved grants during

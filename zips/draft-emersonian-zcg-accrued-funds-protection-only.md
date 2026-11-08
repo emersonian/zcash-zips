@@ -159,30 +159,27 @@ treats that as a separate question, and answers it.
 
 ## Reasons to protect accrued funds
 
-The funds were issued for a stated purpose. ZIP 1015 restricts the ZCG funds to
-grants to parties independent of FPF, or to Autonomous Entities, plus related
-administration, and requires FPF to hold them as a restricted fund donation.
-Each block that paid the ZCG Funding Stream was produced, and each ZEC in it was
-issued, on that basis.
+The funds were issued for a stated purpose. ZIP 1015 restricts them to grants
+to parties independent of FPF, or to Autonomous Entities, plus related
+administration, and requires FPF to hold them as a restricted fund. Each ZEC
+paid to ZCG was issued on that basis.
 
-Grantees and applicants rely on ZCG being able to pay. If its balance can be
-taken by a later vote, every multi-year grant carries political risk, and
-capable teams will either discount that risk or not apply.
+Grantees rely on ZCG being able to pay. If its balance can be taken by a later
+vote, every multi-year grant carries political risk, and capable teams will
+discount that risk or not apply.
 
-There is legal exposure for FPF. Sending restricted funds to a purpose outside
-the restriction, or to an address from which they can never be recovered, may
-expose FPF's directors to claims under Cayman Islands law. In October 2026 FPF
-said that its counsel had considered such a donation subject to "an
-affirmative community vote in favor of the proposal and an accepted ZIP"
-[^forum-fpf-reply]. Neither term is defined in any ZIP.
+FPF also faces legal exposure. Sending restricted funds outside the
+restriction, or to an unrecoverable address, may expose its directors to
+claims under Cayman Islands law. In October 2026 FPF said its counsel had
+considered such a donation subject to "an affirmative community vote in favor
+of the proposal and an accepted ZIP" [^forum-fpf-reply], neither of which any
+ZIP defines.
 
-Taking validly issued funds from a disfavored recipient is, in governance
-terms, close to freezing a disfavored user's coins. A clear rule against the
-first makes it easier for the community to say credibly that it will not do
-the second.
-
-Finally, separating future funding from past funding lets the community debate
-the Accrual Rate without that debate also being about money already committed.
+Taking validly issued funds from a disfavored recipient is close, in
+governance terms, to freezing a disfavored user's coins. A clear rule against
+the first makes it more credible that the community will not do the second.
+And separating past funding from future funding lets the community debate the
+Accrual Rate without also fighting over money already committed.
 
 
 # Privacy Implications
@@ -572,31 +569,24 @@ policy governing it to be published.
 
 ## Rationale for the entrenchment approach
 
-A ZIP records community consensus and cannot by itself prevent a later ZIP,
-with later consensus, from reversing it. This ZIP does not rely on its own text
-alone. It combines three measures:
+A ZIP records community consensus and cannot by itself stop a later ZIP from
+reversing it. This ZIP therefore combines three measures: a rule in the ZIP
+process against repeal by implication, a published legal commitment by FPF
+that a later ZIP cannot undo and that an independent party can enforce, and a
+request that node developers and operators not implement or run a consensus
+change aimed at ZCG's outputs.
 
-* a procedural rule in the ZIP process, under which a later ZIP cannot repeal
-  this one by implication and the ZIP Editors are asked to treat conflicting
-  drafts as such;
-* a published legal commitment by FPF, which a later ZIP cannot undo, and which
-  gives an independent party standing to enforce the restriction; and
-* a request that node developers and operators not implement or run a
-  consensus change aimed at ZCG's outputs, which is the only way funds already
-  paid to FPF-controlled addresses could be taken on-chain.
-
-Entrenchment should be rare in the ZIP process. It is used here because it
-protects a past act of issuance rather than a future policy choice, it restates
-a restriction FPF has already accepted, and without it any ZCG balance remains
-exposed to a single future vote.
+Entrenchment should be rare. It is used here because it protects a past act of
+issuance rather than a future policy choice, it restates a restriction FPF has
+already accepted, and without it any ZCG balance stays exposed to a single
+future vote.
 
 ## Rationale for consulting both coinholders and ZCAP
 
 Neither ZIP 1015 nor ZIP 1016 gives coinholder votes a formal role over ZCG
-funds; coinholder votes under ZIP 1016 are binding only for the
-Coinholder-Controlled Fund, and the ZCG Committee is selected by ZCAP. Asking
-both groups gives broader evidence of support, and avoids implying that a
-coinholder-amount voting round alone could later authorize a Taking.
+funds, and the ZCG Committee is selected by ZCAP. Asking both groups gives
+broader evidence of support, and avoids implying that a coinholder-amount
+voting round alone could later authorize a Taking.
 
 
 # References

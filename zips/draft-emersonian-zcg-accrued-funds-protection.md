@@ -579,6 +579,12 @@ The Treasury Committee MUST have at least three members.
 No person SHALL be a member of both the ZCG Committee and the Treasury
 Committee at the same time.
 
+No person who is a member of the ZCG Committee on the Activation Date, or who
+has been a member at any time in the 12 months before their appointment, SHALL
+be appointed to the Treasury Committee. No person SHALL join the ZCG Committee
+within 12 months after leaving the Treasury Committee. A person who resigns
+from the ZCG Committee does not become eligible sooner by doing so.
+
 The restrictions on association with BP/ECC, ZF, and FPF in point 7 of the
 Reference Text apply to the Treasury Committee in the same way as to the ZCG
 Committee. A majority of Treasury Committee members MUST NOT have an
@@ -892,8 +898,6 @@ This ZIP has no effect on Testnet. Testnet funds are not Accrued ZCG Funds.
   Treasury Committee is read here as appointing its first members, setting
   their terms, and adopting its first charter. Should it also cover the first
   Program Budget?
-* Should there be a waiting period before a former member of one committee may
-  join the other?
 * Should the size of the Discretionary Budget move from ZCAP to the Treasury
   Committee, given that the Treasury Committee sets the Program Budget?
 * Is the 30-day exception for conversions needed to pay approved grants during

@@ -113,46 +113,37 @@ not say who pays for any of this. Today each Key-Holder Organization pays for
 its own share of the work from its own budget, which was raised for other
 purposes.
 
-The amount at stake is large. At NU6.1 the Key-Holder Organizations received
-78,750 ZEC from the Deferred Dev Fund Lockbox [^zip-0271-disbursement]. At a
-price of about 1,262 USD per ZEC (CoinGecko, 2026-11-08) that was about
-99 million USD. Grant rounds have since paid out part of it. The Q3 2026 round
-alone paid about 8.39 million USD [^cryptonews-q3]. A further 12% of the block
-subsidy keeps going into the Deferred Dev Fund Lockbox until Mainnet height
-6132390 [^zip-0214-rev3]. About 74,400 ZEC built up there between NU6.1
-activation and NU7 activation, and about 216 ZEC more is added each day.
-Altogether, roughly 315,000 ZEC (about 400 million USD at today's price)
-may pass through Key-Holder Organization custody before the stream ends.
+The amounts are large. At NU6.1 the Key-Holder Organizations received 78,750
+ZEC from the Deferred Dev Fund Lockbox [^zip-0271-disbursement], about 99
+million USD at 1,262 USD per ZEC (CoinGecko, 2026-11-08), of which grant
+rounds have since paid out part (about 8.39 million USD in Q3 2026 alone
+[^cryptonews-q3]). The lockbox stream continues until Mainnet height 6132390
+[^zip-0214-rev3], adding about 216 ZEC a day on top of the roughly 74,400 ZEC
+that built up before NU7. In total, roughly 315,000 ZEC (about 400 million
+USD) may pass through Key-Holder Organization custody.
 
 Holding keys to funds of this size makes the people involved targets.
 Kidnapping and home-invasion "wrench attacks" against people known to control
 cryptocurrency have become more common. Some people associated with Key-Holder
 Organizations have already hired personal security at conferences. Protection
 of this kind, together with crime insurance, secure key storage, and the legal
-work that ZIP 1016 requires, is a real and continuing cost. Rough industry
-figures are:
-
-* event close protection: about 1,500 to 3,000 USD per agent per day;
-* full-time executive protection: about 250,000 USD to more than 1 million USD
-  per protected person per year;
-* crime or specie insurance on digital assets: about 0.5% to 2% of the insured
-  amount per year, where it can be obtained at all;
-* hardware security modules, key ceremonies, security audits, and legal and
-  compliance work: about 150,000 to 450,000 USD per organization per year.
-
-These figures are estimates for planning, not quotes.
+work that ZIP 1016 requires, is a real and continuing cost. As rough planning
+estimates, not quotes: event close protection costs about 1,500 to 3,000 USD
+per agent per day; full-time executive protection about 250,000 USD to more
+than 1 million USD per person per year; crime insurance on digital assets,
+where available, about 0.5% to 2% of the insured amount per year; and key
+management, audits, and legal work about 150,000 to 450,000 USD per
+organization per year.
 
 If these costs are not paid, Key-Holder Organizations may cut corners on
 security, or may stop serving. Either outcome puts the Fund and the people at
 risk. If each Key-Holder Organization pays for these costs out of its own
 budget, the work is funded in a way coinholders cannot see or control.
 
-A fixed, published fee, approved by coinholders, solves both problems. The
-Key-Holder Organizations get a predictable amount for routine administration.
-Security spending is reimbursed against evidence, so the money goes to
-security and not to general overhead. Coinholders can see what the Fund pays
-for administration and can change the fee through the same process that set
-it.
+A fixed, published fee, approved by coinholders, gives the Key-Holder
+Organizations a predictable amount for routine administration, reimburses
+security spending only against evidence, and lets coinholders see and change
+what the Fund pays.
 
 
 # Privacy Implications

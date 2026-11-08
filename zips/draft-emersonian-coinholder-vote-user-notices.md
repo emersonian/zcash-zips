@@ -183,36 +183,22 @@ section in the same way as any other Funded Organization.
 ### Reasonable means
 
 A Funded Organization MUST use reasonable means to give a Voter Notice to its
-End Users. Reasonable means are those that a well-run organization would use
-to tell its users about something important that affects them, such as a
-security update or a change of terms of service. They include, but are not
-limited to:
-
-* a notice displayed inside any Wallet Application, or other application, that
-  the organization develops, operates, or distributes;
-* a banner or prominent notice on the organization's website, and on the
-  website or landing page of each of its products;
-* a message to its email newsletters and mailing lists;
-* a post on each of its Official Accounts;
-* an announcement in any chat community it operates, such as a Discord server
-  or Telegram group; and
-* for a hosted or custodial service, a notice on the account dashboard or in
-  the service's ordinary account communications.
+End Users: the means a well-run organization would use to tell users about
+something important, such as a security update. These include in-app notices,
+website banners, newsletters and mailing lists, posts on Official Accounts,
+announcements in chat communities it runs, and, for hosted or custodial
+services, account dashboards and ordinary account messages.
 
 At a minimum:
 
 1. A Funded Organization that develops, operates, or distributes a Wallet
-   Application MUST display a Voter Notice inside that Wallet Application, in
-   accordance with [In-wallet notices](#in-wallet-notices).
+   Application MUST display a Voter Notice inside it, in accordance with
+   [In-wallet notices](#in-wallet-notices).
 2. Every Funded Organization MUST post a Voter Notice on each of its Official
    Accounts, and on its website if it has one.
-3. Every Funded Organization that operates a newsletter or mailing list MUST
-   send a Voter Notice to it, unless no issue of the newsletter or list is
-   sent in the period between the Notice Date and the close of the Voting
-   Window, in which case it SHOULD send one.
-
-A Funded Organization MAY use other means that it judges more effective for
-its users, in addition to these.
+3. Every Funded Organization with a newsletter or mailing list MUST send a
+   Voter Notice to it if it sends any issue between the Notice Date and the
+   close of the Voting Window, and otherwise SHOULD send one.
 
 ### Timing
 
@@ -283,17 +269,12 @@ Voter Notice as follows:
 * It MUST stop being displayed when the Voting Window closes, except that it
   MAY be replaced by a neutral notice of the result.
 
-A Wallet Application that is released on a slower cycle (for example through
-app store review, or on hardware wallet firmware) MAY meet the timing
-requirements by including the Voter Notice in a release published within 7
-days after the Notice Date, provided that the release is published, and the
-Funded Organization uses its other reasonable means in the meantime.
-
-A Wallet Application whose interface cannot display a notice, such as a
-command-line wallet or a hardware wallet screen, MUST instead print or show
-the Voter Notice where it can (for example in a startup log message or in its
-companion application), and its Funded Organization MUST rely on its other
-reasonable means.
+A Wallet Application on a slower release cycle (such as app store review or
+hardware wallet firmware) MAY meet the timing requirements with a release
+published within 7 days after the Notice Date, if the Funded Organization uses
+its other means in the meantime. A Wallet Application that cannot display a
+notice, such as a command-line wallet, MUST show it where it can (for example
+in a startup message or companion app).
 
 ### Privacy requirements for Voter Notices
 

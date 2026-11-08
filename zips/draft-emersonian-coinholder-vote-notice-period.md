@@ -116,14 +116,11 @@ The two can be adopted separately or together.
 
 ## Coinholders need time to take part
 
-A coinholder who wants to vote has to do several things before the Voting
-Window opens. They have to learn that a vote is happening. They have to read
-the proposals, which for a change to development funding can run to many
-thousands of words across several ZIPs and Forum threads. They may have to
-install or update a wallet that supports voting, move ZEC into a pool or
-address type that the voting method supports, and in some cases do this before
-the Snapshot. Holders who keep ZEC in cold storage, on hardware wallets, or
-with a custodian need longer than holders who keep ZEC in a hot wallet. If the
+Before the Voting Window opens, a coinholder has to learn that a vote is
+happening, read the proposals (which for development funding can run to many
+thousands of words), perhaps install or update a wallet that supports voting,
+and perhaps move ZEC into a supported pool before the Snapshot. Holders using
+cold storage, hardware wallets, or custodians need longer. If the
 coinholder vote thresholds ZIP [^draft-thresholds] is adopted, a coinholder
 who wants to be counted as a verified coinholder-person will also have to
 complete personhood verification.
@@ -165,21 +162,17 @@ Under that timeline:
 * anyone who wanted to submit a proposal for the poll had about 3 days and 8
   hours to do so.
 
-The thread also shows that basic facts a voter needs were still open shortly
-before the proposal deadline. A participant asked whether voting would be
-single-choice or ranked-choice, and the thread did not answer [^forum-timeline].
-Another asked that "retaining the existing ZIP 1016 arrangements unchanged" be
-offered as an explicit answer, separate from abstaining [^forum-timeline].
-Another asked how proposals would be summarized for coinholders who had not
-followed the debate [^forum-timeline]. These are reasonable questions, and a
-voter cannot prepare until they are answered.
+Basic facts were still open shortly before the proposal deadline. Participants
+asked whether voting would be single-choice or ranked-choice, whether keeping
+the existing ZIP 1016 arrangements would be an explicit option, and how
+proposals would be summarized, and the thread did not answer
+[^forum-timeline]. A voter cannot prepare until such questions are settled.
 
-The organizers of that poll may have good reasons for moving quickly. This ZIP
-does not question their good faith. It observes that nothing in any ZIP
-prevented the timeline, and that the result of a vote held on that timeline
-will be cited as evidence of coinholder support for changes to development
-funding and a network upgrade. A poll with that much weight should not depend
-on whether coinholders happened to notice a Forum post in a given week.
+The organizers may have good reasons for moving quickly, and this ZIP does not
+question their good faith. But nothing in any ZIP prevented the timeline, and
+the result will be cited as evidence of coinholder support for changes to
+development funding and a network upgrade. A poll with that much weight
+should not depend on whether coinholders noticed a Forum post in a given week.
 
 Under this ZIP, if the final questions and answer choices had been published
 on 9 November, the earliest that the poll could have opened is 9 December
