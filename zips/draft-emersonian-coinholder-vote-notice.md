@@ -736,7 +736,7 @@ When a grantee commits a substantial violation:
 * for a grant from the Coinholder-Controlled Fund, the Key-Holder
   Organizations SHOULD treat the violation as a contentious issue for which a
   further coinholder-amount voting round is held on whether funding should
-  continue, as provided in ZIP 1016 [^zip-1016-cc]; and
+  continue, as provided in ZIP 1016 [^zip-1016-disbursement]; and
 * the ZCG Committee, and coinholders in any coinholder-amount voting round,
   SHOULD take the violation into account in any future funding decision for
   that Funded Organization.
@@ -931,8 +931,6 @@ anything.
 [^zip-1016]: [ZIP 1016: Community and Coinholder Funding Model](zip-1016.md)
 
 [^zip-1016-disbursement]: [ZIP 1016: Community and Coinholder Funding Model — Disbursement process](zip-1016.md#disbursement-process)
-
-[^zip-1016-cc]: [ZIP 1016: Community and Coinholder Funding Model — Requirements on use of the Coinholder-Controlled Fund](zip-1016.md#requirements-on-use-of-the-coinholder-controlled-fund)
 
 [^draft-mcgee-keyholders]: [Draft ZIP: Update to ZIP 1016 & ZIP 271: Key-Holder Organizations](draft-mcgee-keyholders-organizations.md)
 
