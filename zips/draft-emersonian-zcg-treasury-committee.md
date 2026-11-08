@@ -108,8 +108,9 @@ This ZIP changes how Zcash Community Grants (ZCG) manages its funds.
 ZCG is required to form a separate Treasury Committee of at least three people.
 Only the Treasury Committee may buy, sell, or convert ZEC, hedge, or set
 budgets. The ZCG grants committee makes grant decisions only, and no person may
-sit on both committees. Until the Treasury Committee is formed, the grants
-committee may not decide to buy or sell ZEC.
+sit on both committees. ZCAP selects every member for a one-year term, sets
+their pay, and can remove a member by a two-thirds vote. Until the Treasury
+Committee is formed, the grants committee may not decide to buy or sell ZEC.
 
 The Treasury Committee must publish a ten-year budget, a treasury plan, and a
 strategy for hedging the risk of a fall in the price of ZEC by 31 March 2027,
@@ -228,16 +229,13 @@ action that led to it complied with this section.
 ZCG SHALL establish a ZCG Treasury Committee no later than 45 days after the
 Activation Date.
 
-The ZCG Committee SHALL make the initial decisions needed to establish the
-Treasury Committee, namely:
+ZCAP, or any successor process that selects members of the ZCG Committee, MUST
+select all members of the Treasury Committee, including its initial members,
+using the same voting process it uses to select members of the ZCG Committee.
+The ZCG Committee and FPF MUST NOT appoint Treasury Committee members.
 
-* appointing its initial members;
-* setting the initial term of each member; and
-* adopting its initial charter.
-
-The ZCG Committee SHALL publish these decisions on the Zcash Community Forum
-when they are made. After the Treasury Committee is established, the ZCG
-Committee has no further role in it except as required by this ZIP.
+The initial members SHALL adopt the Treasury Committee's charter, and publish
+it on the Zcash Community Forum, within 30 days after they are selected.
 
 ### Membership
 
@@ -259,26 +257,78 @@ association, as defined in that point, with FPF.
 Members SHOULD have relevant experience, such as in treasury management,
 finance, risk management, or digital asset custody.
 
+### Terms
+
+Each member serves a term of one year, as for members of the ZCG Committee
+under point 7 of the Reference Text. A member MAY be selected again for further
+terms.
+
+So that seats come up for selection at different times, ZCAP MAY give some of
+the initial members a first term of six months. Every later term is one year.
+
+A member MAY resign at any time by notice posted on the Zcash Community Forum.
+
+A vacancy, however it arises, SHALL be filled by ZCAP for the rest of the
+term, within 45 days after it arises.
+
 ### Charter
 
-The initial charter MUST specify:
+The charter MUST specify:
 
-* the length of members' terms, which SHOULD be staggered;
-* how later members are selected, which SHOULD be by ZCAP or a successor
-  process, in the same way as members of the ZCG Committee;
-* how members may be removed;
 * quorum and voting rules;
 * a personal trading policy meeting the requirements of
   [Conflicts of interest and personal trading](#conflicts-of-interest-and-personal-trading);
   and
 * how the charter may be amended.
 
-The charter MUST NOT give the ZCG Committee any power to remove Treasury
-Committee members, to direct Treasury Decisions, or to amend the charter.
+The charter MUST NOT conflict with this ZIP, and MUST NOT give the ZCG
+Committee any power to remove Treasury Committee members, to direct Treasury
+Decisions, or to amend the charter.
 
-Compensation of Treasury Committee members, if any, SHALL be determined in the
-same way as compensation of ZCG Committee members under point 9 of the
-Reference Text, and is an administration expense.
+### Compensation
+
+Treasury Committee members SHALL be paid for their work, at a rate set by ZCAP
+or its successor process in the same way as compensation of ZCG Committee
+members under point 9 of the Reference Text. Compensation is an administration
+expense, and the rate SHALL be published.
+
+### Removal
+
+A Treasury Committee member MAY be removed before the end of their term only
+by the process in this section.
+
+Grounds. A member may be removed for:
+
+* a material breach of this ZIP or the charter, including the disclosure and
+  personal trading rules;
+* acting outside the authority given by this ZIP;
+* fraud, dishonesty, or a criminal conviction related to their role;
+* missing three consecutive meetings, or more than half of the meetings in any
+  six-month period, without good reason; or
+* being unable to carry out their duties.
+
+Motion. Any member of ZCAP, the ZCG Committee, or the Treasury Committee, or
+FPF, MAY file a motion to remove a member. The motion MUST be posted on the
+Zcash Community Forum, and MUST state the grounds and the facts relied on.
+
+Response. The member named in the motion MUST be given at least 14 days after
+the motion is posted to respond publicly before any vote opens.
+
+Vote. ZCAP SHALL then vote on the motion, using the same voting process it
+uses to select members of the ZCG Committee, over a period of at least seven
+days. The member is removed if at least two-thirds of the votes cast are in
+favor, and at least half of ZCAP's members vote. ZCAP SHALL publish the
+result and the number of votes for and against.
+
+Suspension. Where a motion alleges a breach of the personal trading rules, or
+misuse of funds, a majority of the other Treasury Committee members MAY
+suspend the member from all Treasury Decisions until the vote ends, and MUST
+publish that they have done so.
+
+Effect. A removed member leaves office when the result is published. They are
+not eligible to be selected to the Treasury Committee or the ZCG Committee
+for three years afterwards. Their seat is filled as a vacancy under
+[Terms](#terms).
 
 ### Authority
 
@@ -527,10 +577,10 @@ This ZIP has no effect on Testnet. Testnet funds are not Accrued ZCG Funds.
 
 ## Open questions
 
-* The requirement that the ZCG Committee make "the initial decisions" for the
-  Treasury Committee is read here as appointing its first members, setting
-  their terms, and adopting its first charter. Should it also cover the first
-  Program Budget?
+* Is 45 days long enough for ZCAP to select the initial members, or should the
+  window be 60 days?
+* Should a community petition, for example by a set number of Forum members,
+  also be able to start a removal motion?
 * Should the size of the Discretionary Budget move from ZCAP to the Treasury
   Committee, given that the Treasury Committee sets the Program Budget?
 * Is the 30-day exception for conversions needed to pay approved grants during
@@ -558,9 +608,12 @@ Separating the people who choose grants from the people who decide when to sell
 ZEC reduces the risk that grant pressure drives poorly timed sales, and limits
 the number of people with advance knowledge of ZCG's trades. It is a common
 arrangement in endowments and foundations, where an investment or finance
-committee is distinct from the program committee. Giving the ZCG Committee the
-initial appointments lets the new committee start quickly, while the charter
-restrictions prevent the grants committee from controlling it afterwards.
+committee is distinct from the program committee. ZCAP selects every
+member, including the first ones, so that the grants committee never chooses
+the people who decide when its funds are sold. Members serve one-year terms,
+are paid at a rate ZCAP sets, and can be removed only by a two-thirds ZCAP
+vote after public charges and a chance to respond, as for any other role that
+handles this much money.
 
 The interim restriction prevents the grants committee from making large
 discretionary sales or purchases while the new committee is being formed. The
