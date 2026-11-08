@@ -246,11 +246,10 @@ The Treasury Committee MUST have at least three members.
 No person SHALL be a member of both the ZCG Committee and the Treasury
 Committee at the same time.
 
-No person who is a member of the ZCG Committee on the Activation Date, or who
-has been a member at any time in the 12 months before their appointment, SHALL
-be appointed to the Treasury Committee. No person SHALL join the ZCG Committee
-within 12 months after leaving the Treasury Committee. A person who resigns
-from the ZCG Committee does not become eligible sooner by doing so.
+No person who is a member of the ZCG Committee on the Activation Date SHALL be
+appointed to the Treasury Committee, even if they later leave the ZCG
+Committee. Former members who left the ZCG Committee before the Activation
+Date are eligible.
 
 The restrictions on association with BP/ECC, ZF, and FPF in point 7 of the
 Reference Text apply to the Treasury Committee in the same way as to the ZCG
