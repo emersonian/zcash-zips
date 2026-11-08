@@ -1,5 +1,5 @@
     ZIP: Unassigned
-    Title: Update to ZIP 1016: Raise the Coinholder Vote Threshold to 600,000 ZEC
+    Title: Update to ZIP 1016: Raise the Coinholder Vote Threshold to 1,000,000 ZEC
     Owners: Emerson <TBD>
     Status: Draft
     Category: Process
@@ -45,11 +45,15 @@ ZEC voted
 
 This ZIP raises the minimum amount of ZEC that must be voted for a
 coinholder-amount voting round under ZIP 1016 [^zip-1016] to approve a grant,
-from 420,000 ZEC to 600,000 ZEC. At current holdings, this means that no
-single publicly known holder of ZEC can make a vote valid on their own.
+from 420,000 ZEC to 1,000,000 ZEC. At current holdings, this means that no
+single publicly known holder of ZEC, and not even the two largest known
+holders together, can make a vote valid on their own. The top proposal in the
+most recent round drew about 2.18 million ZEC, worth about US$3.1 billion, so
+the new threshold is still well within reach of proposals with broad
+support.
 
 It also writes down how abstentions are counted, which ZIP 1016 never stated:
-abstaining ZEC counts toward the 600,000 ZEC threshold, but not toward the
+abstaining ZEC counts toward the 1,000,000 ZEC threshold, but not toward the
 majority.
 
 Nothing else about coinholder voting changes. Ballots are still weighted by
@@ -71,10 +75,10 @@ right threshold for coinholder votes?" as an open question
 The threshold counts coins, not people. As of late 2026, at least two single
 holders control a large share of it:
 
-| Holder | ZEC held | Share of the 420,000 ZEC threshold | Share of 600,000 ZEC |
+| Holder | ZEC held | Share of the 420,000 ZEC threshold | Share of 1,000,000 ZEC |
 |---|---|---|---|
-| Grayscale Zcash ETF (ZCSH) | ~594,293 ZEC (2026-10-30) [^grayscale] | 141% | 99% |
-| Cypherpunk Technologies (Nasdaq: CYPH) | ~326,417 ZEC (2026-09-30) [^blockworks-q3] | 78% | 54% |
+| Grayscale Zcash ETF (ZCSH) | ~594,293 ZEC (2026-10-30) [^grayscale] | 141% | 59% |
+| Cypherpunk Technologies (Nasdaq: CYPH) | ~326,417 ZEC (2026-09-30) [^blockworks-q3] | 78% | 33% |
 
 Under the current rule, one holder could supply the whole turnout of a
 coinholder-amount voting round, and a vote in which no one else took part
@@ -83,9 +87,12 @@ or would vote, in this way. The concern is that the rules allow it, so a
 passing result cannot by itself show that coinholders in general, rather than
 one balance sheet, supported a grant.
 
-Raising the threshold to 600,000 ZEC puts it above the largest known single
-holding. Recent high-interest rounds have drawn far more than that, so the
-change should not stop well-supported proposals from passing.
+Raising the threshold to 1,000,000 ZEC puts it well above the largest known
+single holding, and above the two largest combined. Recent high-interest
+rounds have drawn far more than that: the top proposal in the Q3 2026 round
+had about 2.18 million ZEC voted, worth about US$3.1 billion at the time
+[^blockworks-q3]. The change should not stop well-supported proposals from
+passing.
 
 
 # Privacy Implications
@@ -122,7 +129,7 @@ what voters reveal, or what is published about them.
 In the "Disbursement process" section of ZIP 1016 [^zip-1016-disbursement],
 the paragraph beginning "For coinholder votes, a minimum of 420,000 ZEC" is
 amended by replacing "420,000 ZEC (2% of the total eventual supply)" with
-"600,000 ZEC". The rest of that paragraph, including the rules for competing
+"1,000,000 ZEC". The rest of that paragraph, including the rules for competing
 proposals, is unchanged.
 
 ## Counting ZEC voted
@@ -143,7 +150,7 @@ the result of a coinholder-amount voting round.
 ## Testnet
 
 In the "Testnet-specific considerations" section of ZIP 1016, "The threshold
-of 420,000 ZEC" is replaced with "The threshold of 600,000 ZEC".
+of 420,000 ZEC" is replaced with "The threshold of 1,000,000 ZEC".
 
 ## Open question removed from ZIP 1016
 
@@ -160,21 +167,25 @@ round to which it applies.
 
 # Rationale
 
-## Why 600,000 ZEC
+## Why 1,000,000 ZEC
 
-600,000 ZEC is just above the largest publicly known single holding of ZEC
-(the Grayscale Zcash ETF, at about 594,293 ZEC on 2026-10-30 [^grayscale]). It
-is about 2.86% of the eventual supply of 21,000,000 ZEC. It is well below the
+1,000,000 ZEC is about 4.76% of the eventual supply of 21,000,000 ZEC. It is
+well above the largest publicly known single holding (the Grayscale Zcash ETF,
+at about 594,293 ZEC on 2026-10-30 [^grayscale]), and above the two largest
+known holdings combined (about 920,710 ZEC). It is still well below the
 turnout of recent high-interest rounds: the top proposal in the Q3 2026 round
-had about 2.18 million ZEC voted [^blockworks-q3]. Turnout in the Q1 2026
-round peaked near 500,000 ZEC, so some past proposals that passed would not
-have reached the new threshold. This is intended.
+had about 2.18 million ZEC voted [^blockworks-q3], worth about US$3.1 billion
+at the price of ZEC on 30 September 2026. The new threshold is less than half
+of that turnout.
+
+Turnout in the Q1 2026 round peaked near 500,000 ZEC, so some past proposals
+that passed would not have reached the new threshold. This is intended.
 
 ## Why a fixed number
 
 A fixed number was chosen over a percentage of circulating supply so that
 voters and applicants know the threshold in advance. Holdings change, and
-600,000 ZEC will not stay above the largest single holding forever. A minimum
+1,000,000 ZEC will not stay above the largest single holding forever. A minimum
 number of human participants, as proposed in the companion draft
 [^draft-human-minimum], is the more durable protection, but it needs a
 proof-of-personhood process that does not exist yet. This ZIP can be adopted
@@ -191,12 +202,14 @@ divided vote to be valid.
 
 # Open questions
 
-* Should ZEC that abstains count toward the 600,000 ZEC threshold? This draft
+* Should ZEC that abstains count toward the 1,000,000 ZEC threshold? This draft
   says yes.
 * Should the threshold be reviewed on a schedule, for example whenever a
   single known holding passes 80% of it?
+* Is 1,000,000 ZEC too high for routine grant rounds with lower turnout? An
+  alternative is 600,000 ZEC, just above the largest known single holding.
 * This draft reads the request to increase "the amount of ZEC required to
-  participate in coinholder-amount voting to 600,000 ZEC" as raising the
+  participate in coinholder-amount voting" as raising the
   minimum total ZEC voted on a question. It does not set a minimum holding for
   an individual voter. If a per-voter minimum was intended, the Specification
   needs to be rewritten.

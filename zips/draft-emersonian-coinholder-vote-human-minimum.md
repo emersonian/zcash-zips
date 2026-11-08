@@ -105,7 +105,7 @@ part. The author does not claim that anyone has done so. The concern is that a
 result alone cannot show that coinholders in general, rather than one balance
 sheet, supported a grant.
 
-The companion quorum draft [^draft-quorum] raises the threshold to 600,000
+The companion quorum draft [^draft-quorum] raises the threshold to 1,000,000
 ZEC, but any coin threshold can be met by whoever accumulates enough coins.
 This ZIP therefore also requires a minimum number of distinct humans to have
 taken part.
@@ -418,7 +418,7 @@ human visible.
 
 [^zip-1016-veto]: [ZIP 1016: Community and Coinholder Funding Model, Veto process](zip-1016.md#veto-process)
 
-[^draft-quorum]: [Draft ZIP: Update to ZIP 1016: Raise the Coinholder Vote Threshold to 600,000 ZEC](draft-emersonian-coinholder-vote-quorum.md)
+[^draft-quorum]: [Draft ZIP: Update to ZIP 1016: Raise the Coinholder Vote Threshold to 1,000,000 ZEC](draft-emersonian-coinholder-vote-quorum.md)
 
 [^draft-mcgee-keyholders]: [Draft ZIP: Update to ZIP 1016 & ZIP 271: Key-Holder Organizations](draft-mcgee-keyholders-organizations.md)
 
